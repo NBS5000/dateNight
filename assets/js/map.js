@@ -2,7 +2,7 @@
 
 var tomTomKey = "GGODvJKHxmR05owz4sPq91rHvgsk0HWf";
 var disp = document.getElementById("display");
-var streetAddress;
+var streetAddress, placeName, lat, lon, tel;
 
 
 var btn = document.getElementById("confirm");
@@ -26,18 +26,28 @@ btn.addEventListener("click",function(confirm){
 })
 
 function address (loc){
-
+    streetAddress="", placeName="", lat="", lon="", tel="";
     var safeLocation = urlSafe(loc);
     var tomTomUrl = "https://api.tomtom.com/search/2/geocode/" + safeLocation + ".json?key=" + tomTomKey + "&countryset=AU&language=en-AU&idxSet=POI"
     callTom(tomTomUrl);
     // console.log(where);
     // console.log(streetAddress);
+
     if(!streetAddress){
         setTimeout(function(){
-            disp.innerHTML = streetAddress;
-        }, 500);
+            if(!tel){
+                tel = "No telephone number noted."
+            }
+            var details = placeName + ", " + streetAddress + "<br/>Tel: "+tel+"<br/>Lat: "+lat+" Lon: "+lon;
+            disp.innerHTML = details;
+            var modal = document.getElementById("myModal");
+            modal.style.display = "none";
+            getLocation();
+        }, 1000);
     }else{
         disp.innerHTML = streetAddress;
+        var modal = document.getElementById("myModal");
+        modal.style.display = "none";
     }
 
 
@@ -68,21 +78,30 @@ function callTom(url){
             
         )
         .then(function(res){
-            // console.log(res);
-            // console.log(res.results[0].address.freeformAddress);
             streetAddress = res.results[0].address.freeformAddress;
-            // console.log(streetAddress);
-            // streetAddress = toString(streetAddress);
-            // disp.innerHTML = streetAddress;
-            // return streetAddress;
-            // var lat = res.results[0].position.lat;
-            // var lon = res.results[0].position.lon;
-            // console.log(lat);
-            // console.log(lon);
+            placeName = res.results[0].poi.name;
+            lat = res.results[0].position.lat;
+            lon = res.results[0].position.lon;
+            tel = res.results[0].poi.phone;
+            dateLocation = document.getElementById("search").value = "";
         })
         .catch(function (error) {
             alert('Did not work: ' + error);
         });
 
 
+}
+
+/*own location functions taken from w3schools*/
+var myLoc = document.getElementById("myLoc");
+function getLocation() {
+    if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(showPosition);
+    } else { 
+        myLoc.innerHTML = "Geolocation is not supported by this browser.";
+    }
+}
+function showPosition(position) {
+    myLoc.innerHTML = "Latitude: " + position.coords.latitude + 
+    "<br>Longitude: " + position.coords.longitude;
 }

@@ -5,20 +5,35 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Date Night</title>
+    <!-- <link rel="stylesheet" type="text/css" href="./assets/css/reset.css"/> -->
     <link rel="stylesheet" type="text/css" href="./assets/css/main.css"/>
-    <link rel="stylesheet" type="text/css" href="./assets/css/reset.css"/>
+    <link rel="stylesheet" type="text/css" href="./assets/css/modal.css"/>
     <link rel="icon" type="image/x-icon" href="./assets/images/favicon.ico">
 </head>
 <body>
 
 
+    <button id="modalBtn">Begin</button>
+    <!-- below example taken and adjusted from w3schools-->
+<!-- The Modal -->
+<div id="myModal" class="modal">
+
+    <!-- Modal content -->
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <textarea name="search" id="search" cols="30" rows="2"></textarea>
+        <button id="confirm">Confirm</button>
+    </div>
+
+</div>
     
-    <textarea name="search" id="search" cols="30" rows="2"></textarea>
-    <button id="confirm">Confirm</button>
+    <!-- <textarea name="search" id="search" cols="30" rows="2"></textarea>
+    <button id="confirm">Confirm</button> -->
     <p id="display"></p>
+    <p id="myLoc"></p>
 
     <script src="./assets/js/mainScript.js"></script>
     <script src="./assets/js/map.js"></script>
-
+    <script src="./assets/js/modal.js"></script>
 </body>
 </html>
