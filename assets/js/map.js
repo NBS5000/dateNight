@@ -17,8 +17,15 @@ btn.addEventListener("click",function(confirm){
     if(element.matches("#confirm")){
         // var dateLocation = "mumbo & jumbo terrigal";
         var dateLocation = document.getElementById("search").value;
-        if(dateLocation){
+        var dateDate = document.getElementById("datePicker").value;
+        if(dateLocation && dateDate){
             address(dateLocation);
+        }else if(dateLocation && !dateDate){
+            alert("Enter a date");
+            return
+        }else if(!dateLocation && dateDate){
+            alert("Enter a location");
+            return
         }else{
             modal.style.display = "none";
             return;

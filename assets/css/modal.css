@@ -40,12 +40,10 @@
 }
 
 
-
 /*temporary location of map css*/
 #myMap{
     width: 50%;
     height: 400px;
     margin: 0 auto;
-    background-color: blue;
     position: relative;
 }
