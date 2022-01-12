@@ -1,19 +1,22 @@
-
+/*
+Project 1
+Date Night
+- Steve Barry -
+- Samer Balee - Mona Mahmoud - Joel Shewan -
+javascript file for map information
+*/
 
 var tomTomKey = "GGODvJKHxmR05owz4sPq91rHvgsk0HWf";
 var disp = document.getElementById("display");
-var streetAddress, placeName, $lat, $lon, tel, myLat, myLon;
 var myLoc = document.getElementById("myLoc");
+var streetAddress, placeName, $lat, $lon, tel, myLat, myLon;
 
 var btn = document.getElementById("confirm");
-
 btn.addEventListener("click",function(confirm){
-
     var element = confirm.target;
     if(element.matches("#confirm")){
         // var dateLocation = "mumbo & jumbo terrigal";
         var dateLocation = document.getElementById("search").value;
-
         if(dateLocation){
             address(dateLocation);
         }else{
@@ -21,9 +24,6 @@ btn.addEventListener("click",function(confirm){
             return;
         }
     }
-
-
-
 })
 
 function route(alat, alon, blat, blon){
@@ -38,17 +38,11 @@ function route(alat, alon, blat, blon){
         console.log(res.routes[0].summary.travelTimeInSeconds);
         console.log(res.routes[0].summary.lengthInMeters);
         document.getElementById("myMap").innerHTML = "<iframe width='100%' height='100%' frameborder='0' scrolling='no' marginheight='0'marginwidth='0'src='https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q="+$lat+","+$lon+"&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed'></iframe>";
-
-
-
-
     })
     .catch(function (error) {
         alert('Route did not work: ' + error);
     });
-
 }
-
 
 /*own location functions taken from w3schools*/
 function getLocation() {
@@ -66,7 +60,6 @@ function showPosition(position) {
 }
 /*********************/
 
-
 function address (loc){
     streetAddress="", placeName="", $lat="", $lon="", tel="";
     var safeLocation = urlSafe(loc);
@@ -82,7 +75,6 @@ function address (loc){
             var details = placeName + ", " + streetAddress + "<br/>Tel: "+tel+"<br/>Lat: "+$lat+" Lon: "+$lon;
             disp.innerHTML = details;
             modal.style.display = "none";
-            // getLocation();
             route(myLat,myLon,$lat,$lon);
 
 
@@ -91,20 +83,12 @@ function address (loc){
         disp.innerHTML = streetAddress;
         modal.style.display = "none";
     }
-
-
-
 }
-
-
-
 
 function urlSafe(location){
     var x = encodeURIComponent(location);
     return x;
 }
-
-
 
 function callTom(url){
     fetch(url)
@@ -122,14 +106,4 @@ function callTom(url){
         .catch(function (error) {
             alert('Location finder did not work: ' + error);
         });
-
-
 }
-
-
-
-
-
-
-
-
