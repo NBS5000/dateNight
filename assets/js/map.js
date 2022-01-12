@@ -11,55 +11,22 @@ callTom(tomTomUrl);
 function urlSafe(location){
     var x = encodeURIComponent(location);
     return x;
-    // console.log(x);
 }
 
 function callTom(url){
-    var result = fetch(url)
-        .then(function (response) {
-            if (response.ok) {
-                // console.log(response.text());
-
-                // var matchText = response.text();
-                // console.log(matchText);
-                // var jsonText = JSON.parse(matchText);
-                // console.log(jsonText);
-
-                var matchJson = response.json();
-                console.log(matchJson);
-            }else {
-                alert('Error: ' + response.statusText);
-            }
-        
+    return fetch(url)
+        .then((res) => res.json())
+        .then(function(res){
+            console.log(res);
+            console.log(res.results[0].address.freeformAddress);
+            var lat = res.results[0].position.lat;
+            var lon = res.results[0].position.lon;
+            console.log(lat);
+            console.log(lon);
         })
-        .then(function (data){
-
-            console.log(data);
-
-        })
-
         .catch(function (error) {
             alert('Did not work: ' + error);
         });
 
 
 }
-
-
-var getUserRepos = function (user) {
-    var apiUrl = 'https://api.github.com/users/' + user + '/repos';
-
-    fetch(apiUrl)
-        .then(function (response) {
-        if (response.ok) {
-        response.json().then(function (data) {
-            displayRepos(data, user);
-        });
-        } else {
-            alert('Error: ' + response.statusText);
-        }
-      })
-      .catch(function (error) {
-        alert('Unable to connect to GitHub');
-      });
-  };
