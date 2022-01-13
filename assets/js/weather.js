@@ -28,8 +28,26 @@ function getCityWeather(lat, lon){
             cityWeather = weather;
 
             //****next should be calling a function to update the GUI with from cityWeather variable***//
+            
 
         });
+}
+
+//function to display weather conditions on a specified date, should be passed a Date object
+function displayWeather(date){
+var i;
+for(i=0;i<8;i++){
+    //search for the required day within the data returned by openweather API
+    if(new Date(cityWeather.daily[i].dt*1000).toDateString()==date.toDateString()){
+        //stop looping because we found the required day
+        break;
+    }
+}
+//display data for cityWeather.daily[i]
+document.getElementById("temp").textContent = cityWeather.daily[i].temp.night;
+document.getElementById("humidity").textContent = cityWeather.daily[i].humidity;
+document.getElementById("wind").textContent = cityWeather.daily[i].wind_speed;
+
 }
 
 
