@@ -13,24 +13,23 @@ var streetAddress, placeName, $lat, $lon, tel, myLat, myLon;
 
 var btn = document.getElementById("confirm");
 btn.addEventListener("click",function(confirm){
-    var element = confirm.target;
-    if(element.matches("#confirm")){
-        // var dateLocation = "mumbo & jumbo terrigal";
-        var dateLocation = document.getElementById("search").value;
-        var dateDate = document.getElementById("datePicker").value;
-        if(dateLocation && dateDate){
-            address(dateLocation);
-        }else if(dateLocation && !dateDate){
-            alert("Enter a date");
-            return
-        }else if(!dateLocation && dateDate){
-            alert("Enter a location");
-            return
-        }else{
-            modal.style.display = "none";
-            return;
-        }
+
+    // var dateLocation = "mumbo & jumbo terrigal";
+    var dateLocation = document.getElementById("search").value;
+    var dateDate = document.getElementById("datePicker").value;
+    if(dateLocation && dateDate){
+        address(dateLocation);
+    }else if(dateLocation && !dateDate){
+        alert("Enter a date");
+        return
+    }else if(!dateLocation && dateDate){
+        alert("Enter a location");
+        return
+    }else{
+        modal.style.display = "none";
+        return;
     }
+    
 })
 
 function route(alat, alon, blat, blon){
