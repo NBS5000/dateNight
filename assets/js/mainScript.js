@@ -7,13 +7,14 @@ function displayDate() {
     dateDisplayEl.text(rightNow);
   }
 
-displayDate();
+// displayDate();
 // dateToDateDisplay();
-setInterval(displayDate, 1000);
-
-// function dateToDateDisplay(dateNight) {
-//     var daysToDate = moment(dateNight, 'MM/DD/YYYY').diff(moment(), 'days');
-//     dateToDateEl.text(daysToDate);
-// }
 
 
+if(dateDisplayEl){
+  setInterval(displayDate, 1000);
+}
+function dateToDateDisplay(dateNight) {
+    var daysToDate = moment(Date.parse(dateNight), 'MM/DD/YYYY').diff(moment(), 'days');
+    dateToDateEl.text(daysToDate);
+}
