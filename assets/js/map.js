@@ -81,19 +81,20 @@ function showPosition(position) {
 /*********************/
 
 function callTom(url){
-    debugger;
+    // debugger;
     console.log(url);
+
     fetch(url)
         .then(
             res => res.json(),
         )
         .then(function(res){
-            streetAddress = res.results[0].address.freeformAddress;
-            placeName = res.results[0].poi.name;
-            $lat = res.results[0].position.lat;
-            $lon = res.results[0].position.lon;
-            tel = res.results[0].poi.phone;
-            dateLocation = document.getElementById("search").value = "";
+            streetAddress = res.results[0].address.freeformAddress,
+            placeName = res.results[0].poi.name,
+            $lat = res.results[0].position.lat,
+            $lon = res.results[0].position.lon,
+            tel = res.results[0].poi.phone,
+            dateLocation = document.getElementById("search").value = "",
             console.log($lat+" - lon: "+$lon);
             if(!$lat || !$lon){
                 setTimeout(function(){},1000);
@@ -109,10 +110,10 @@ function callTom(url){
 }
 
 function route(alat, alon, blat, blon){
-    debugger;
+    // debugger;
     var from = alat+","+alon;
     var to = blat+","+blon;
-    console.log(from);
+    console.log(to);
     var tomRouteUrl = "https://api.tomtom.com/routing/1/calculateRoute/"+from+":"+to+"/json?key="+tomTomKey;
 
     fetch(tomRouteUrl)
@@ -122,9 +123,9 @@ function route(alat, alon, blat, blon){
     .then(function(res){
         jDist = res.route[0].summary.lengthInMeters;
         jTime = res.route[0].summary.travelTimeInSeconds;
-        document.getElementById("myMap").innerHTML = "<iframe width='100%' height='100%' frameborder='0' scrolling='no' marginheight='0'marginwidth='0'src='https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q="+$lat+","+$lon+"&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed'></iframe>";
+        // document.getElementById("myMap").innerHTML = "<iframe width='100%' height='100%' frameborder='0' scrolling='no' marginheight='0'marginwidth='0'src='https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q="+$lat+","+$lon+"&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed'></iframe>";
     })
     .catch(function (error) {
-        alert('Route did not work: ' + error);
+        // alert('Route did not work: ' + error);
     });
 }
