@@ -14,7 +14,7 @@ var streetAddress, placeName, $lat, $lon, tel, myLat, myLon, jDist, jTime, dateD
 
 var btn = document.getElementById("confirm");
 if(btn){
-
+debugger;
     btn.addEventListener("click",function(confirm){
 
         // var dateLocation = "mumbo & jumbo terrigal";
@@ -85,9 +85,9 @@ function address (loc){
     /*redirects to date screen*/
     document.location.replace(dateUrl);
     /* call's Mona's function*/
-    getCityWeather($lat,$lon);
+    // getCityWeather($lat,$lon);
     /* calls Samers's function*/
-    dateToDateDisplay(dateDate);
+    // dateToDateDisplay(dateDate);
 
     // if(!streetAddress){
     //     setTimeout(function(){
