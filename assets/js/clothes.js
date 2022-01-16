@@ -1,3 +1,10 @@
+/*
+Project 1
+Date Night
+- Steve Barry -
+- Samer Balee - Mona Mahmoud - Joel Shewan -
+Javascript file handling clothes image
+*/
 var key, url;
 
 //key has very low limits!! please don't over use!!!
@@ -29,6 +36,7 @@ function getClothes (query){
         console.log(r + " - src " +imageSrc + " - alt: "+altText);
         document.getElementById("clothesImage").src = imageSrc;
         document.getElementById("clothesImage").alt = altText;
+        document.getElementById("clothingSpan").innerHTML = " for the " + searchTxt;
 
     })
     .catch(function (error) {

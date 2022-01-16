@@ -1,6 +1,9 @@
 /*
--Steve Barry-
-main css file
+Project 1
+Date Night
+- Steve Barry -
+- Samer Balee - Mona Mahmoud - Joel Shewan -
+Main CSS file
 */
 
 body{
@@ -53,8 +56,40 @@ h1{
     font-size: 120%;
 }
 #clothesImage{
-    height: 450px;
-    width: 300px;
+    /* height: 450px; */
+    /* width: 300px; */
+    width: 40%;
+    height: fit-content;
+    border-radius: 15px;
+    animation: glowBox 6s;
+    animation-iteration-count: 99;
+    min-width: 180px;
+    max-height: 450px;
+}
+#clothingRec{
+    border: slategray 1px solid;
+    text-align: center;
+    /* width: 700px;*/
+    width: 40%;
+    padding: 24px;
+    border-radius: 25px;
+    box-shadow: slategray 5px 5px 10px;
+    display: flex;
+    flex-wrap: wrap;
+    min-width: 180px;
+
+}
+#clothesImage:hover{
+    box-shadow: slategray 5px 5px 10px;
+}
+.clothingText{
+    width: 80%;
+}
+#clothingTextDiv{
+    display: flex;
+    flex-wrap: wrap;
+    width: 50%;
+    padding-left: 50px;
 }
 
 
