@@ -35,6 +35,7 @@ if(btn){
     })
 }
 function address (loc){
+    debugger;
     streetAddress="", placeName="", $lat="", $lon="", tel="";
     var safeLocation = urlSafe(loc);
     var tomTomUrl = "https://api.tomtom.com/search/2/geocode/" + safeLocation + ".json?key=" + tomTomKey + "&countryset=AU&language=en-AU&idxSet=POI";
