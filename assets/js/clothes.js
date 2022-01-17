@@ -44,8 +44,8 @@ function getClothes (query){
     });
 }
 
-function urlSafe(location){
-    var x = encodeURIComponent(location);
+function urlSafe(query){
+    var x = encodeURIComponent(query);
     return x;
 }
 
