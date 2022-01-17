@@ -59,10 +59,11 @@ function address (loc){
         },1000);
     }
     console.log($lat + " - lon: " + $lon + " - date: " + dateDate);
-    /*redirects to date screen*/
-    document.location.href(dateUrl);
-    /* call's Mona's function*/
-    getCityWeather($lat,$lon,dateDate);
+    // /*redirects to date screen*/
+    // //document.location.href(dateUrl);
+    // document.location.href = dateUrl;
+    // /* call's Mona's function*/
+    //getCityWeather($lat,$lon,dateDate);
     /* calls Samer's function*/
     dateToDateDisplay(dateDate);
 
@@ -138,6 +139,11 @@ function route(alat, alon, blat, blon){
     .then(function(res){
         jDist = res.route[0].summary.lengthInMeters;
         jTime = res.route[0].summary.travelTimeInSeconds;
+    /*redirects to date screen*/
+    //document.location.href(dateUrl);
+    document.location.href = dateUrl;
+    /* call's Mona's function*/
+    getCityWeather($lat,$lon,dateDate);
         // document.getElementById("myMap").innerHTML = "<iframe width='100%' height='100%' frameborder='0' scrolling='no' marginheight='0'marginwidth='0'src='https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q="+$lat+","+$lon+"&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed'></iframe>";
     })
     .catch(function (error) {
