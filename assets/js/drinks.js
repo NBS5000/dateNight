@@ -1,8 +1,8 @@
 
 var cocktail, cImg, cAlt, beer, bImg, bAlt;
 var ctUrl = "https://www.thecocktaildb.com/api/json/v1/1/random.php";
-var brUrl = "https://world.openfoodfacts.org/cgi/search.pl?search_terms=craft%20beer&json=true&count=20";
-"https://world.openfoodfacts.org/cgi/search.pl?search_terms=craft%20beer&json=true&count=20"
+var brUrl = "https://api.punkapi.com/v2/beers/random";
+
 function getCocktail(){
 
     fetch(ctUrl)
@@ -17,19 +17,16 @@ function getCocktail(){
             if(!cAlt){
                 cAlt = "A picture of a cocktail"
             }
-            console.log(cocktail);
-            console.log(cImg);
-            console.log(cAlt);
         })
         .then(function(){
 
         
             if(!cocktail || !cImg || !cAlt){
-                setTimeout(1000);
+                setTimeout(200);
             }
-            document.getElementById("drinkName").innerHTML = cocktail,
-            document.getElementById("drinkImg").src = cImg,
-            document.getElementById("drinkImg").alt = cAlt
+            document.getElementById("cName").innerHTML = cocktail,
+            document.getElementById("cImg").src = cImg,
+            document.getElementById("cImg").alt = cAlt
         })
         .catch(function (error) {
             console.log('Cocktail error: ' + error);
@@ -42,30 +39,26 @@ function getBeer(){
             (res) => res.json()
         )
         .then(function(res){
-
-            beer = res.drinks[0].strDrink;
-            bImg = res.drinks[0].strDrinkThumb;
-            bAlt = res.drinks[0].strDrinkAlternative;
-            if(!bAlt){
-                bAlt = "A picture of a cocktail"
-            }
-            console.log(beer);
-            console.log(bImg);
-            console.log(bAlt);
+            console.log(res);
+            beer = "BrewDog " + res[0].name;
+            bImg = res[0].image_url;
+            bAlt = "A picture of a beer"
         })
         .then(function(){
-
-        
             if(!beer || !bImg || !bAlt){
-                setTimeout(1000);
+                setTimeout(200);
             }
-            document.getElementById("drinkName").innerHTML = beer,
-            document.getElementById("drinkImg").src = bImg,
-            document.getElementById("drinkImg").alt = bAlt
+            if(!bImg){
+                bImg = "https://i.pinimg.com/originals/ea/b6/5b/eab65bccd941cb4ee55d5880c4419aa8.jpg";
+            }
+            document.getElementById("bName").innerHTML = beer,
+            document.getElementById("bImg").src = bImg,
+            document.getElementById("bImg").alt = bAlt
         })
         .catch(function (error) {
             console.log('Beer error: ' + error);
         });
-
-
 }
+
+getCocktail();
+getBeer();
