@@ -32,18 +32,22 @@ h1{
     animation: glow 4s;
     animation-iteration-count: 99;
 }
+
 #modalBtn{
+    position:relative;
+    top: 550px;
     height: 100px;
     width: 100%;
     font-size: 200%;
     border-radius: 30px;
     background-color: white;
-    
 }
+
 #modalBtn:hover,.conCan:hover{
     animation: glowBox 4s;
     animation-iteration-count: 99;
 }
+
 .conCan{
     margin: 5px 25px;
     width: 100px;
