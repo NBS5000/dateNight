@@ -1,4 +1,10 @@
-/* modal js taken from w3schools*/
+/*
+Project 1
+Date Night
+- Steve Barry -
+- Samer Balee - Mona Mahmoud - Joel Shewan -
+Javascript file for handling display of modal screen
+Modal js taken from w3schools*/
 
 // Get the modal
 var modal = document.getElementById("myModal");

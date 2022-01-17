@@ -1,0 +1,76 @@
+/*
+Project 1
+Date Night
+- Steve Barry -
+- Samer Balee - Mona Mahmoud - Joel Shewan -
+Media CSS file
+*/
+@media screen and (max-width:1250px) and (min-width:1060px) {
+
+    .clothingText{
+        width: 100%;
+    }
+    #clothingRec{
+        width: 50%;
+        padding: 10px;
+    
+    }
+    #clothesImage{
+        margin: 20px auto;
+        align-content: center;
+        width: 90%;
+    }
+    #clothingTextDiv{
+        width: 90%;
+        padding:0;
+        margin:0  auto;
+    }
+}
+@media screen and (max-width:1060px) and (min-width:650px) {
+
+    .clothingText{
+        width: 100%;
+    }
+    #clothingRec{
+        width: 50%;
+        padding: 10px;
+    
+    }
+    #clothesImage{
+        margin: 20px auto;
+        align-content: center;
+        width: 90%;
+    }
+    #clothingTextDiv{
+        width: 90%;
+        padding:0;
+        margin:0  auto;
+    }
+}
+/* when screen at below size, set answers to appear 4 rows of 1 wide*/
+@media screen and (max-width:650px) {
+    .clothingText{
+        width: 100%;
+        padding: 0 auto;
+    }
+    #clothingTextDiv{
+        display: flex;
+        flex-wrap: wrap;
+        width: 90%;
+        padding-left: 0;
+        text-align: center;
+    }
+    #clothesImage{
+        margin: 15px auto;
+    }
+    #clothingRec{
+        width: 40%;
+        padding: 10px;
+    
+    }
+    #clothingTextDiv{
+        width: 90%;
+        padding:0;
+        margin:0  auto;
+    }
+}
