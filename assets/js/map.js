@@ -18,11 +18,11 @@ if(btn){
     btn.addEventListener("click",function(){
 
 
-        // var dateLocation = "mumbo jumbo terrigal";
+        var dateLocation = "mumbo jumbo terrigal";
 
     
 
-        var dateLocation = document.getElementById("search").value;
+        // var dateLocation = document.getElementById("search").value;
         dateDate = document.getElementById("datePicker").value;
         if(dateLocation && dateDate){
             address(dateLocation);
@@ -55,14 +55,15 @@ function address (loc){
     if(!$lat || !$lon){
         setTimeout(function(){
 
-            console.log("Waiting");
+            // console.log("Waiting");
         },1000);
     }
-    console.log($lat + " - lon: " + $lon + " - date: " + dateDate);
-    /*redirects to date screen*/
-    document.location.href(dateUrl);
-    /* call's Mona's function*/
-    getCityWeather($lat,$lon,dateDate);
+    // console.log($lat + " - lon: " + $lon + " - date: " + dateDate);
+    // /*redirects to date screen*/
+    // //document.location.href(dateUrl);
+    // document.location.href = dateUrl;
+    // /* call's Mona's function*/
+    //getCityWeather($lat,$lon,dateDate);
     /* calls Samer's function*/
     dateToDateDisplay(dateDate);
 
@@ -106,8 +107,8 @@ function callTom(url){
             $lon = res.results[0].position.lon,
             tel = res.results[0].poi.phone,
 
-            dateLocation = document.getElementById("search").value = "",
-            console.log($lat+" - lon: "+$lon);
+            dateLocation = document.getElementById("search").value = "";
+            // console.log($lat+" - lon: "+$lon);
             if(!$lat || !$lon){
                 setTimeout(function(){},1000);
             }
@@ -130,17 +131,31 @@ function route(alat, alon, blat, blon){
     var to = blat+","+blon;
 
     var tomRouteUrl = "https://api.tomtom.com/routing/1/calculateRoute/"+from+":"+to+"/json?key="+tomTomKey;
-
+    // debugger;
+    console.log(tomRouteUrl);
     fetch(tomRouteUrl)
     .then(
-        (res) => res.json(),
+        (res) => res.json()
     )
     .then(function(res){
-        jDist = res.route[0].summary.lengthInMeters;
-        jTime = res.route[0].summary.travelTimeInSeconds;
+        // setTimeout(function(){
+        //     console.log("5 second delay");
+        // },5000);
+        // if(!jDist || !jTime){
+
+        // }
+        jDist = res.routes[0].summary.lengthInMeters;
+        jTime = res.routes[0].summary.travelTimeInSeconds;
+        console.log(jDist);
+        console.log(jTime);
+        /*redirects to date screen*/
+        //document.location.href(dateUrl);
+        document.location.href = dateUrl;
+        /* call's Mona's function*/
+        getCityWeather($lat,$lon,dateDate);
         // document.getElementById("myMap").innerHTML = "<iframe width='100%' height='100%' frameborder='0' scrolling='no' marginheight='0'marginwidth='0'src='https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q="+$lat+","+$lon+"&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed'></iframe>";
     })
     .catch(function (error) {
-        // alert('Route did not work: ' + error);
+        console.log('Route did not work: ' + error);
     });
 }
