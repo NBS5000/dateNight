@@ -144,3 +144,8 @@ function route(alat, alon, blat, blon){
         // alert('Route did not work: ' + error);
     });
 }
+
+
+
+
+
