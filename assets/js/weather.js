@@ -69,7 +69,7 @@ function displayWeather(date){
     // console.log(iconLink);
 
     document.getElementById("temp").textContent = "Temp: " + cityWeather.daily[i].temp.day + "c";
-    document.getElementById("humidity").textContent = "Humidity: " + cityWeather.daily[i].humidity + "%";
+    //document.getElementById("humidity").textContent = "Humidity: " + cityWeather.daily[i].humidity + "%";
     document.getElementById("wind").textContent = "Wind: " + cityWeather.daily[i].wind_speed * 3.6 + "kph";
     
     document.getElementById("weatherIcon").src = iconLink;

@@ -5,10 +5,13 @@
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
     <title>Weather</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
-
+    <link rel="stylesheet" type="text/css" href="./assets/css/main.css"/>
 </head>
 <body>
-    <div id="weatherWidget">
+
+
+
+    <!-- <div id="weatherWidget">
         <p id="temp"></p>
         <p id="wind"></p>
         <p id="humidity"></p>
@@ -16,7 +19,42 @@
 
 
         <button onclick="location.href ='./index.html';">index</button>
+    </div> -->
+
+
+    <article id="weatherWidget" class="widget">
+        <div class="weatherIcon"></div>
+        <div class="weatherData">
+        <h1 id="temp" class="temperature"></h1>
+        <h2 id="wind" class="description"></h2>
+        <h3 id="cityName" class="city"></h3>
+        <!-- <p id="humidity"></p> -->
+        <img id="weatherIcon" src="" alt="Weather icon">
+        </div>
     </div>
+    <div class="date">
+    <h4 class="month" id="month"></h4>
+    <h5 class="day" id="day"></h5>
+    </div>
+
+        <button onclick="location.href ='./index.html';">index</button>
+    </article>
+
+    <!-- <article class="widget">
+        <div class="weatherIcon"></div>
+        <div class="weatherData">
+        <h1 class="temperature">25&deg;</h1>
+        <h2 class="description">Partly Cloudy</h2>
+        <h3 class="city">Tirana, Albania</h3>
+        </div>
+        <div class="date">
+        <h4 class="month" id="month"></h4>
+        <h5 class="day" id="day"></h5>
+        </div>
+    </article> -->
+
+
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
     <script src="./assets/js/weather.js"></script>
     <script src="./assets/js/map.js"></script>
