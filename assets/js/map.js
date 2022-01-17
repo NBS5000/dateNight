@@ -131,22 +131,44 @@ function route(alat, alon, blat, blon){
     var to = blat+","+blon;
 
     var tomRouteUrl = "https://api.tomtom.com/routing/1/calculateRoute/"+from+":"+to+"/json?key="+tomTomKey;
+    console.log("route url"+tomRouteUrl);
 
     fetch(tomRouteUrl)
-    .then(
-        (res) => res.json(),
-    )
-    .then(function(res){
-        jDist = res.route[0].summary.lengthInMeters;
-        jTime = res.route[0].summary.travelTimeInSeconds;
-    /*redirects to date screen*/
-    //document.location.href(dateUrl);
-    document.location.href = dateUrl;
-    /* call's Mona's function*/
-    getCityWeather($lat,$lon,dateDate);
-        // document.getElementById("myMap").innerHTML = "<iframe width='100%' height='100%' frameborder='0' scrolling='no' marginheight='0'marginwidth='0'src='https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q="+$lat+","+$lon+"&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed'></iframe>";
+    .then(function (response) {
+    return response.json();
     })
-    .catch(function (error) {
-        // alert('Route did not work: ' + error);
-    });
+    .then(function (res) {
+        //console.log("route data: "+res.routes[0]);
+        //jDist = res.route;
+        //jTime = res.route[0].summary.travelTimeInSeconds;
+        jDist = res.routes[0].summary.lengthInMeters;
+        jTime = res.routes[0].summary.travelTimeInSeconds;
+        document.location.href = dateUrl;
+        getCityWeather($lat,$lon,dateDate);
+    //   for (var i = 0; i < data.length; i++) {
+    //     var listItem = document.createElement('li');
+    //     listItem.textContent = data[i].html_url;
+    //     repoList.appendChild(listItem);
+      }
+    );
+
+
+    // fetch(tomRouteUrl)
+    // .then(
+    //     (res) => res.json(),
+    // )
+    // .then(function(res){
+    //     console.log("inside then"+res.route[0]);
+    //     jDist = res.route[0].summary.lengthInMeters;
+    //     jTime = res.route[0].summary.travelTimeInSeconds;
+    // /*redirects to date screen*/
+    // //document.location.href(dateUrl);
+    // document.location.href = dateUrl;
+    // /* call's Mona's function*/
+    // getCityWeather($lat,$lon,dateDate);
+    //     // document.getElementById("myMap").innerHTML = "<iframe width='100%' height='100%' frameborder='0' scrolling='no' marginheight='0'marginwidth='0'src='https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q="+$lat+","+$lon+"&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed'></iframe>";
+    // })
+    // .catch(function (error) {
+    //     alert('Route did not work: ' + error);
+    // });
 }
