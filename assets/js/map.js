@@ -10,12 +10,18 @@ var tomTomKey = "GGODvJKHxmR05owz4sPq91rHvgsk0HWf";
 var disp = document.getElementById("display");
 var myLoc = document.getElementById("myLoc");
 var dateUrl = "./weather.html";
+
 var streetAddress, placeName, $lat, $lon, tel, myLat, myLon, jDist, jTime, dateDate, tomTomUrl;
+
 var btn = document.getElementById("confirm");
 if(btn){
     btn.addEventListener("click",function(){
 
+
         // var dateLocation = "mumbo jumbo terrigal";
+
+    
+
         var dateLocation = document.getElementById("search").value;
         dateDate = document.getElementById("datePicker").value;
         if(dateLocation && dateDate){
@@ -34,10 +40,12 @@ if(btn){
     })
 }
 function address (loc){
+
     streetAddress="", placeName="", $lat="", $lon="", tel="";
     var safeLocation = urlSafe(loc);
     tomTomUrl = "https://api.tomtom.com/search/2/geocode/" + safeLocation + ".json?key=" + tomTomKey + "&countryset=AU&language=en-AU&idxSet=POI";
     getLocation();
+
 
     if(!jDist || !jTime){
         setTimeout(function(){},1000);
@@ -46,6 +54,7 @@ function address (loc){
     modal.style.display = "none";        
     if(!$lat || !$lon){
         setTimeout(function(){
+
             console.log("Waiting");
         },1000);
     }
@@ -56,10 +65,12 @@ function address (loc){
     getCityWeather($lat,$lon,dateDate);
     /* calls Samer's function*/
     dateToDateDisplay(dateDate);
+
 }
 
 function urlSafe(location){
     var x = encodeURIComponent(location);
+
     return x;
 }
 
@@ -67,6 +78,7 @@ function urlSafe(location){
 function getLocation() {
     if (navigator.geolocation) {
         navigator.geolocation.getCurrentPosition(showPosition);
+        //console.log(navigator.geolocation);
     } else { 
         myLoc.innerHTML = "Geolocation is not supported by this browser.";
     }
@@ -74,14 +86,14 @@ function getLocation() {
 function showPosition(position) {
     myLat = position.coords.latitude;
     myLon = position.coords.longitude;
-    // console.log(myLat);
+
     callTom(tomTomUrl);
+
 }
 /*********************/
 
 function callTom(url){
-    // debugger;
-    console.log(url);
+    
 
     fetch(url)
         .then(
@@ -93,6 +105,7 @@ function callTom(url){
             $lat = res.results[0].position.lat,
             $lon = res.results[0].position.lon,
             tel = res.results[0].poi.phone,
+
             dateLocation = document.getElementById("search").value = "",
             console.log($lat+" - lon: "+$lon);
             if(!$lat || !$lon){
@@ -100,6 +113,7 @@ function callTom(url){
             }
             
     route(myLat,myLon,$lat,$lon);
+
             // route(myLat,myLon,$lat,$lon);
             // if(!jDist || !jTime){
             //     setTimeout(function(){},1000);
@@ -114,7 +128,7 @@ function route(alat, alon, blat, blon){
     // debugger;
     var from = alat+","+alon;
     var to = blat+","+blon;
-    console.log(to);
+
     var tomRouteUrl = "https://api.tomtom.com/routing/1/calculateRoute/"+from+":"+to+"/json?key="+tomTomKey;
 
     fetch(tomRouteUrl)

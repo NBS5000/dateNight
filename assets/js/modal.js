@@ -13,22 +13,16 @@ var modal = document.getElementById("myModal");
 var btn = document.getElementById("myBtn");
 
 // Get the <span> element that closes the modal
-// var span = document.getElementsByClassName("close")[0];
 var canx = document.getElementById("canx");
 
-
-// When the user clicks the button, open the modal 
+// When the user clicks the "Begin"  button, open the modal 
 
 var modalBtn = document.getElementById("modalBtn");
 modalBtn.addEventListener("click",function(){
     modal.style.display = "block";
 });
 
-
-// When the user clicks on <span> (x), close the modal
-// span.onclick = function() {
-//     modal.style.display = "none";
-// }
+// When the user clicks the "Cancel" button, close the modal and clear fields
 
 var canxBtn = document.getElementById("canx");
 canxBtn.addEventListener("click",function(){
