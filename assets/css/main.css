@@ -6,12 +6,13 @@ Date Night
 Main CSS file
 */
 
-body{
-    width: 100%;
-    position: relative;
-    background-image: url("../images/bg.png");
-    background-repeat: repeat;
-    font-family: Arial, Helvetica, sans-serif;
+/*background moving gradiant with keyframes*/
+body {
+  background: rgb(186,0,198);
+  background: radial-gradient(circle, rgba(186,0,198,1) 11%, rgba(255,3,88,1) 100%);
+  background-size: 400% 400%;
+	animation: gradient 15s ease infinite;
+	height: 100vh;
 }
 
 #content{
@@ -28,19 +29,19 @@ body{
 }
 
 h1{
-    font-size: 700%;
     animation: glow 4s;
     animation-iteration-count: 99;
 }
 
 #modalBtn{
-    position:relative;
-    top: 250px;
+    position: relative;
+    top: 50px;
     height: 100px;
-    width: 50%;
+    width: 60%;
     font-size: 200%;
     border-radius: 30px;
     background-color: white;
+    box-shadow: 2px 2px 8px;
 }
 
 #modalBtn:hover,.conCan:hover{
@@ -116,9 +117,21 @@ h1{
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:300,400,700);
 @import url(https://cdnjs.cloudflare.com/ajax/libs/weather-icons/1.2/css/weather-icons.min.css);
 
-body {
-  background: linear-gradient(90deg, #754d8b 0%, #4e5992 100%);
+
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
 }
+
+
 
 h1, h2, h3, h4, h5 {
   font-weight: normal;
@@ -174,11 +187,12 @@ h1 {
   color: #c5cdcf;
   font-family: 'Open Sans';
   font-weight: 200;
-  font-size: 5.500em;
+  font-size: 6.500em;
   line-height: 2.9375em;
   position: relative;
-  top: 300px;
+  top: 270px;
   transform: translate(0, -50%);
+
 }
 
 h2 {
