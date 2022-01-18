@@ -1,17 +1,4 @@
-#clothesImage{
-    /* height: 450px; */
-    /* width: 300px; */
-    width: 40%;
-    height: fit-content;
-    border-radius: 15px;
-    animation: glowBox 6s;
-    animation-iteration-count: 99;
-    min-width: 180px;
-    max-height: 450px;
-    position: relative;
-}
-
-#clothingWidget{
+#drinksWidget{
     border: slategray 1px solid;
     text-align: center;
     /* width: 700px;*/
@@ -23,20 +10,42 @@
     flex-wrap: wrap;
     min-width: 180px;
 }
-#clothesImage:hover{
-    box-shadow: slategray 5px 5px 10px;
+#drinksH1{
+    font-size: 150%;
+    width: 100%;
 }
-.clothingText{
-    width: 80%;
+.drinkName{
+    font-size: 100%;
+    width: 100%;
 }
-#clothingTextDiv{
-    display: flex;
-    flex-wrap: wrap;
-    width: 50%;
-    padding-left: 50px;
-    
+#drinksH3{
+    font-size: 75%;
+    width: 100%;
 }
+.drinkImg{
+    /* height: 450px; */
+    /* width: 300px; */
+    height: fit-content;
+    border-radius: 15px;
+    animation: glowBox 6s;
+    animation-iteration-count: 99;
+    max-height: 200px; 
+    max-width: 200px;
+    position: relative;
+    margin: 0 auto;
+}
+#cImg{
+    width: 40%;
+    height: auto;
+    min-width: 150px;
 
+}
+#drinkLink{
+    text-decoration: none;
+    color: black;
+    animation: glow 6s;
+    animation-iteration-count: 99;
+}
 @keyframes glow{
     0% {text-shadow: 0px 0px 5px red;}
     25% {text-shadow: 0px 0px 10px purple;}

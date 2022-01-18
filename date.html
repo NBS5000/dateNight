@@ -5,17 +5,20 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <link rel="icon" type="image/x-icon" href="./assets/images/favicon.ico">
+    
     <title>Date Night</title>
+
     <link rel="stylesheet" type="text/css" href="./assets/css/main.css"/>
     <link rel="stylesheet" type="text/css" href="./assets/css/reset.css"/>
-    <link rel="icon" type="image/x-icon" href="./assets/images/favicon.ico">
-
+    <link rel="stylesheet" type="text/css" href="./assets/css/clothes.css"/>
+    <link rel="stylesheet" type="text/css" href="./assets/css/drinks.css"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
 
 
 </head>
-<body>
+<body onload="dateLoad()">
     <header class="jumbotron jumbotron-fluid custom-jumbotron">
         <div class="text-right">
             <h3>Current Time &amp; Date: <span id="time-display">00:00:00</span></h3>
@@ -26,7 +29,7 @@
     <div id="dateContent">
 
         <!-- Clothing widget -->
-        <div id="clothingRec">
+        <div id="clothingWidget">
             <img id="clothesImage" src="https://images.unsplash.com/photo-1640576578061-7e9411975512?ixid=MnwyOTE2MDV8MHwxfHNlYXJjaHw1fHxob3QlMjBjbG90aGluZ3xlbnwwfDF8fHwxNjQyMzQwMjA5\u0026ixlib=rb-1.2.1" alt="No Image source">
             <div id="clothingTextDiv" >
                 <h3 class="clothingText" id="clothingH3">And what to wear....?</h3>
@@ -34,9 +37,15 @@
             </div>
         </div>
     
-
-
-
+        <!-- Drinks widget -->
+        <div id="drinksWidget">
+            <h1 id="drinksH1">Drink confidently....</h1>
+            <h2 id="cName" class="drinkName"></h2>
+            <img id="cImg" class="drinkImg" src="" alt="">
+            <h2 id="bName" class="drinkName"></h2>
+            <img id="bImg" class="drinkImg" src="" alt="">
+            <h3 id="drinksH3"><a id="drinkLink" href="https://drinkwise.org.au/" target="_blank">DRINK RESPONSIBLY</a> </h3>
+        </div>
 
 
 
@@ -55,9 +64,9 @@
         crossorigin="anonymous"
     ></script>
     <script src="./assets/js/dateDisplay.js"></script>
-    <script src="./assets/js/map.js"></script>
+    <script src="./assets/js/dateLoad.js"></script>
     <script src="./assets/js/weather.js"></script>
-    <script src="./assets/js/jokeQuote.js"></script>
+    <script src="./assets/js/drinks.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
 </body>
 </html>
