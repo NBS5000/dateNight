@@ -1,5 +1,6 @@
 var jokeEl = document.querySelector(".jokeOfTheDay");
-
+var quoteEl = document.querySelector(".quotsToday");
+var authorEl = document.querySelector(".author");
 
 
 function getJoke () {
@@ -21,3 +22,26 @@ function getJoke () {
 }
 
 getJoke();
+
+function getQuote () {
+
+  var requestUrl = 'https://api.quotable.io/random';
+
+  fetch(requestUrl)
+  .then(function (response) {
+    return response.json();
+  })
+  .then(function (data) {
+    console.log(data)
+
+   var quote = data.content;
+   var author = data.author
+
+   quoteEl.textContent = quote;
+
+   authorEl.textContent = author;
+
+  })
+}
+
+getQuote();
