@@ -109,20 +109,14 @@ function route(alat, alon, blat, blon){
                 // console.log("0.5 second delay");
             },500);
         }
-        var dateUrl = "./weather.html?lat="+$lat+"&lon="+$lon+"&date="+dateDate+"&dist="+jDist+"&time="+jTime;
+        var dateUrl = "./date.html?lat="+$lat+"&lon="+$lon+"&date="+dateDate+"&dist="+jDist+"&time="+jTime;
         jDist = res.routes[0].summary.lengthInMeters;
         jTime = res.routes[0].summary.travelTimeInSeconds;
-        debugger;
-        console.log(dateUrl);
-        console.log(jDist);
-        console.log(jTime);
-        // var newDate;
-        // newDate.push(dateUrl,jDist,jTime);
 
-        // localStorage.setItem("eventList",JSON.stringify(list));
 
         /*redirects to date screen*/
         document.location.href = dateUrl;
+        /* the map, do not delete */
         // document.getElementById("myMap").innerHTML = "<iframe width='100%' height='100%' frameborder='0' scrolling='no' marginheight='0'marginwidth='0'src='https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q="+$lat+","+$lon+"&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed'></iframe>";
     })
     .catch(function (error) {

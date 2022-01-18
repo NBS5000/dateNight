@@ -22,9 +22,9 @@ function getCocktail(){
 
         
             if(!cocktail || !cImg || !cAlt){
-                setTimeout(200);
+                setTimeout(100);
             }
-            document.getElementById("cName").innerHTML = cocktail,
+            document.getElementById("cName").innerHTML = "Why not give the " + cocktail + " a try?",
             document.getElementById("cImg").src = cImg,
             document.getElementById("cImg").alt = cAlt
         })
@@ -40,13 +40,13 @@ function getBeer(){
         )
         .then(function(res){
             console.log(res);
-            beer = "BrewDog " + res[0].name;
+            beer = "The BrewDog " + res[0].name + " will help relax your nerves.";
             bImg = res[0].image_url;
             bAlt = "A picture of a beer"
         })
         .then(function(){
             if(!beer || !bImg || !bAlt){
-                setTimeout(200);
+                setTimeout(100);
             }
             if(!bImg){
                 bImg = "https://i.pinimg.com/originals/ea/b6/5b/eab65bccd941cb4ee55d5880c4419aa8.jpg";
@@ -60,5 +60,3 @@ function getBeer(){
         });
 }
 
-getCocktail();
-getBeer();

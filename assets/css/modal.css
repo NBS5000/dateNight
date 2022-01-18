@@ -52,6 +52,33 @@ label{
     display: block;
 }
 
+#modalBtn{
+    position: relative;
+    top: 50px;
+    height: 100px;
+    width: 60%;
+    font-size: 200%;
+    border-radius: 30px;
+    background-color: white;
+    box-shadow: 2px 2px 8px;
+}
+
+#modalBtn:hover,.conCan:hover{
+    animation: glowBox 4s;
+    animation-iteration-count: 99;
+}
+.conCan{
+    margin: 5px 25px;
+    width: 100px;
+    height: 40px;
+    border-radius: 20px;
+    border: solid 1px black;
+    background-color: lightsteelblue;
+    color: white;
+    font-weight: bold;
+    font-size: 120%;
+}
+
 /*temporary location of map css*/
 #myMap{
     width: 50%;
