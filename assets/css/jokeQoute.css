@@ -1,0 +1,21 @@
+#jock-quote-div{
+    width: 25%;
+    background-color: aliceblue;
+    border: 5px solid black;
+    border-radius: 1.5rem;
+  }
+  
+  #jock-quote-div h3 {
+    font-size: 1.8rem;
+    color: blueviolet;
+    padding-left: 1.3rem;
+  } 
+  
+  
+  
+  #jock-quote-div p {
+    font-size: 1.3rem;
+    color: rgb(9, 42, 80);
+    padding-left: 1.3rem;
+    font-weight: bold;
+  }
