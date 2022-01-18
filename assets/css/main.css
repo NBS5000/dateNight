@@ -14,6 +14,17 @@ body {
 	animation: gradient 15s ease infinite;
 	height: 100vh;
 }
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
 
 #content{
     width: 50%;
@@ -97,7 +108,6 @@ h1{
     
 }
 
-
 @keyframes glow{
     0% {text-shadow: 0px 0px 5px red;}
     25% {text-shadow: 0px 0px 10px purple;}
@@ -112,27 +122,6 @@ h1{
     75% {box-shadow: 0px 0px 10px purple;color:purple}
     100% {box-shadow: 0px 0px 5px red;color:red}
 }
-
-/* weather widgets CSS  */
-
-/* @import url(https://fonts.googleapis.com/css?family=Open+Sans:300,400,700);
-@import url(https://cdnjs.cloudflare.com/ajax/libs/weather-icons/1.2/css/weather-icons.min.css);
-
-
-
-@keyframes gradient {
-	0% {
-		background-position: 0% 50%;
-	}
-	50% {
-		background-position: 100% 50%;
-	}
-	100% {
-		background-position: 0% 50%;
-	}
-}
-
-
 
 h1, h2, h3, h4, h5 {
   font-weight: normal;
@@ -251,4 +240,15 @@ h5 {
     right: 0;
   bottom: 0;
   border-bottom-right-radius: 10px;
-} */
+}
+
+/* weather widgets CSS  */
+
+/* @import url(https://fonts.googleapis.com/css?family=Open+Sans:300,400,700);
+@import url(https://cdnjs.cloudflare.com/ajax/libs/weather-icons/1.2/css/weather-icons.min.css);
+
+
+
+
+
+
