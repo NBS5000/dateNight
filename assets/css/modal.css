@@ -19,10 +19,7 @@ Taken from w3schools, linked with modal section in HTML and modal.js*/
     overflow: auto; /* Enable scroll if needed */
     background-color: rgb(0,0,0); /* Fallback color */
     background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
-
-    
 }
-
 /* Modal Content */
 .modal-content {
     background-color: #fefefe;
@@ -32,7 +29,6 @@ Taken from w3schools, linked with modal section in HTML and modal.js*/
     width: 80%;
     border-radius: 25px;
 }
-
 /* The Close Button */
 .close {
     color: #aaaaaa;
@@ -40,18 +36,15 @@ Taken from w3schools, linked with modal section in HTML and modal.js*/
     font-size: 28px;
     font-weight: bold;
 }
-
 .close:hover,
 .close:focus {
     color: #000;
     text-decoration: none;
     cursor: pointer;
 }
-
 label{
     display: block;
 }
-
 .modalBtnC{
     position: relative;
     top: 50px;
@@ -62,7 +55,6 @@ label{
     background-color: white;
     box-shadow: 2px 2px 8px;
 }
-
 .modalBtnC:hover,.conCan:hover{
     animation: glowBox 4s;
     animation-iteration-count: 99;
@@ -77,12 +69,4 @@ label{
     color: white;
     font-weight: bold;
     font-size: 120%;
-}
-
-/*temporary location of map css*/
-#myMap{
-    width: 50%;
-    height: 400px;
-    margin: 0 auto;
-    position: relative;
 }
