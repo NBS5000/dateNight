@@ -52,7 +52,7 @@ label{
     display: block;
 }
 
-#modalBtn{
+.modalBtnC{
     position: relative;
     top: 50px;
     height: 100px;
@@ -63,7 +63,7 @@ label{
     box-shadow: 2px 2px 8px;
 }
 
-#modalBtn:hover,.conCan:hover{
+.modalBtnC:hover,.conCan:hover{
     animation: glowBox 4s;
     animation-iteration-count: 99;
 }

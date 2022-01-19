@@ -38,6 +38,8 @@ function getClothes (query){
         document.getElementById("clothesImage").alt = altText;
         document.getElementById("clothingSpan").innerHTML = " for the " + searchTxt;
 
+        
+        /* local storage here*/
     })
     .catch(function (error) {
         console.log('Clothes search did not work: ' + error);
@@ -50,4 +52,3 @@ function urlSafe(query){
 }
 
 
-// getClothes(searchTxt);

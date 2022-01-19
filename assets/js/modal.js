@@ -39,3 +39,8 @@ window.onclick = function(event) {
         modal.style.display = "none";
     }
 }
+/* the below limits to range to what the weather widget can provide */
+var today = new Date().toISOString().split('T')[0];
+var fiveDays = new Date(moment(today).add(6,"days")).toISOString().split('T')[0];
+document.getElementsByName("datePicker")[0].setAttribute('min', today);
+document.getElementsByName("datePicker")[0].setAttribute('max', fiveDays);
