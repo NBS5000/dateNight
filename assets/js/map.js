@@ -115,7 +115,7 @@ function route(alat, alon, blat, blon){
         jTime = res.routes[0].summary.travelTimeInSeconds;
 
         /* local storage */
-        // debugger;
+    
         // gets currently stored data
         var storage = JSON.parse(localStorage.getItem("dateNight"));
         // gets the date object

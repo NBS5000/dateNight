@@ -22,6 +22,13 @@ modalBtn.addEventListener("click",function(){
     modal.style.display = "block";
 });
 
+var modalBtnAss = document.getElementById("modalBtnAssess");
+modalBtnAss.addEventListener("click",function(){
+    var dateUrl = "./date.html?open=yes";
+    document.location.href = dateUrl;
+
+});
+
 // When the user clicks the "Cancel" button, close the modal and clear fields
 
 var canxBtn = document.getElementById("canx");
