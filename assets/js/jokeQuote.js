@@ -2,7 +2,7 @@ var jokeEl = document.querySelector(".jokeOfTheDay");
 var quoteEl = document.querySelector(".quotsToday");
 var authorEl = document.querySelector(".author");
 
-
+//function to fetch jokes URL
 function getJoke () {
 
     var requestUrl = 'https://api.jokes.one/jod';
@@ -23,6 +23,7 @@ function getJoke () {
 
 getJoke();
 
+//function to fetch quotable URL
 function getQuote () {
 
   var requestUrl = 'https://api.quotable.io/random';
