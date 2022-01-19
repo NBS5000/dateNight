@@ -1,14 +1,21 @@
 #jock-quote-div{
-    width: 25%;
-    background-color: aliceblue;
-    border: 5px solid black;
+    width: 40%;
     border-radius: 1.5rem;
+    position: absolute;
+    box-shadow: slategray 5px 5px 10px;
+    padding: 20px;
+    
   }
   
   #jock-quote-div h3 {
+    
     font-size: 1.8rem;
-    color: blueviolet;
+    color: rgb(72, 14, 83);
     padding-left: 1.3rem;
+    width: max-content;
+    animation: glowBox 6s;
+    animation-iteration-count: 99;
+    border-radius: 0,8rem;
   } 
   
   
@@ -18,4 +25,32 @@
     color: rgb(9, 42, 80);
     padding-left: 1.3rem;
     font-weight: bold;
+  }
+
+  #date-widget {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    height: 15vh;
+    font-family: sans-serif;
+    background-color: rgba(190, 214, 236, 0.459) ;
+    
+    box-shadow: slategray 5px 5px 10px;
+    padding: 15px  0 0 15px;
+  }
+
+  #date-widget h3 {
+    width: max-content;
+    color: rgba(32, 3, 21, 0.836);
+    animation: glowBox 6s;
+    animation-iteration-count: 69;
+    border-radius: 0,8rem;
+    
+  }
+
+  #dateOfDate {
+    display: flex;
+   
+    justify-content: center;
+    text-align: center;
   }
