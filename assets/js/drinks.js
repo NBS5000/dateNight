@@ -27,6 +27,8 @@ function getCocktail(){
             document.getElementById("cName").innerHTML = "Why not give the " + cocktail + " a try?",
             document.getElementById("cImg").src = cImg,
             document.getElementById("cImg").alt = cAlt
+
+            /* local storage for cocktail here */
         })
         .catch(function (error) {
             console.log('Cocktail error: ' + error);
@@ -54,6 +56,8 @@ function getBeer(){
             document.getElementById("bName").innerHTML = beer,
             document.getElementById("bImg").src = bImg,
             document.getElementById("bImg").alt = bAlt
+            
+            /* local storage for beer here */
         })
         .catch(function (error) {
             console.log('Beer error: ' + error);
