@@ -8,7 +8,7 @@ javascript file for map information
 var tomTomKey = "GGODvJKHxmR05owz4sPq91rHvgsk0HWf";
 var disp = document.getElementById("display");
 var myLoc = document.getElementById("myLoc");
-var streetAddress, placeName, $lat, $lon, tel, myLat, myLon, jDist, jTime, dateDate, tomTomUrl;
+var streetAddress, placeName, suburb, $lat, $lon, tel, myLat, myLon, jDist, jTime, dateDate, tomTomUrl;
 var btn = document.getElementById("confirm");
 if(btn){
     btn.addEventListener("click",function(){
@@ -79,6 +79,7 @@ function callTom(url){
             res => res.json(),
         )
         .then(function(res){
+            suburb = res.results[0].address.localName,
             streetAddress = res.results[0].address.freeformAddress,
             placeName = res.results[0].poi.name,
             $lat = res.results[0].position.lat,
@@ -109,21 +110,34 @@ function route(alat, alon, blat, blon){
                 // console.log("0.5 second delay");
             },500);
         }
-        var dateUrl = "./date.html?lat="+$lat+"&lon="+$lon+"&date="+dateDate+"&dist="+jDist+"&time="+jTime;
+        var dateUrl = "./date.html?lat="+$lat+"&lon="+$lon+"&date="+dateDate+"&dist="+jDist+"&time="+jTime+"&place="+placeName+"&suburb="+suburb;
         jDist = res.routes[0].summary.lengthInMeters;
         jTime = res.routes[0].summary.travelTimeInSeconds;
 
+        /* local storage */
+        // debugger;
+        // gets currently stored data
+        var storage = JSON.parse(localStorage.getItem("dateNight"));
+        // gets the date object
+        var ls_date = storage[0];
+        // sets the different values of the date
+        ls_date.locationName = placeName;
+        ls_date.dateOf = dateDate;
+        ls_date.suburb = suburb;
+        ls_date.lat = $lat;
+        ls_date.lon = $lon;
+        // sets the updated object to the overall array
+        storage[0] = ls_date;
+        // sets the updated array to localstorage
+        localStorage.setItem('dateNight', JSON.stringify(storage));
 
         /*redirects to date screen*/
         document.location.href = dateUrl;
-        /* the map, do not delete */
-        // document.getElementById("myMap").innerHTML = "<iframe width='100%' height='100%' frameborder='0' scrolling='no' marginheight='0'marginwidth='0'src='https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q="+$lat+","+$lon+"&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed'></iframe>";
     })
     .catch(function (error) {
         console.log('Route did not work: ' + error);
     });
 }
-
 
 
 
