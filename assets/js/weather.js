@@ -37,10 +37,22 @@ function displayWeather(date){
     //display data for cityWeather.daily[i]-->the date of dateNight
     var icon = cityWeather.daily[i].weather[0].icon;
     var iconLink = "http://openweathermap.org/img/w/" + icon + ".png";
+    var showTemp = Math.round(cityWeather.daily[i].temp.day);
+    var showWind = Math.round(cityWeather.daily[i].wind_speed * 3.6);
 
-    document.getElementById("temp").innerHTML = Math.round(cityWeather.daily[i].temp.day) + "&deg;c";
-    document.getElementById("wind").innerHTML = "Wind: " + Math.round(cityWeather.daily[i].wind_speed * 3.6) + "kph";
+    document.getElementById("temp").innerHTML = showTemp + "&deg;c";
+    document.getElementById("wind").innerHTML = "Wind: " + showWind + "kph";
     document.getElementById("cityName").innerHTML = suburb;
     document.getElementById("weatherIcon").src = iconLink;
+
+                
+    // update localstorage
+    var storage = JSON.parse(localStorage.getItem("dateNight"));
+    // sets the different values of the date
+    storage[0].icon = iconLink;
+    storage[0].temp = showTemp;
+    storage[0].wind = showWind;
+    // sets the updated array to localstorage
+    localStorage.setItem('dateNight', JSON.stringify(storage));
 }
 

@@ -27,8 +27,14 @@ function getCocktail(){
             document.getElementById("cName").innerHTML = "Why not give the " + cocktail + " a try?",
             document.getElementById("cImg").src = cImg,
             document.getElementById("cImg").alt = cAlt
-
-            /* local storage for cocktail here */
+            // update localstorage
+            var storage = JSON.parse(localStorage.getItem("dateNight"));
+            // sets the different values of the date
+            storage[0].cocktail = cocktail;
+            storage[0].cocktailImg = cImg;
+            storage[0].cocktailImgAlt = cAlt;
+            // sets the updated array to localstorage
+            localStorage.setItem('dateNight', JSON.stringify(storage));
         })
         .catch(function (error) {
             console.log('Cocktail error: ' + error);
@@ -41,7 +47,6 @@ function getBeer(){
             (res) => res.json()
         )
         .then(function(res){
-            console.log(res);
             beer = "The BrewDog " + res[0].name + " will help relax your nerves.";
             bImg = res[0].image_url;
             bAlt = "A picture of a beer"
@@ -57,7 +62,14 @@ function getBeer(){
             document.getElementById("bImg").src = bImg,
             document.getElementById("bImg").alt = bAlt
             
-            /* local storage for beer here */
+            // update localstorage
+            var storage = JSON.parse(localStorage.getItem("dateNight"));
+            // sets the different values of the date
+            storage[0].beer = beer;
+            storage[0].beerImg = bImg;
+            storage[0].beerImgAlt = bAlt;
+            // sets the updated array to localstorage
+            localStorage.setItem('dateNight', JSON.stringify(storage));
         })
         .catch(function (error) {
             console.log('Beer error: ' + error);

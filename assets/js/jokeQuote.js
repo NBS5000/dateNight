@@ -12,6 +12,14 @@ function getJoke () {
     .then(function (data) {
       var joke = data.contents.jokes[0].joke.text;
       jokeEl.textContent = joke;
+      // update localstorage
+      var storage = JSON.parse(localStorage.getItem("dateNight"));
+      // sets the different values of the date
+      storage[0].joke = joke;
+      // sets the updated array to localstorage
+      localStorage.setItem('dateNight', JSON.stringify(storage));
+
+
     })
 }
 
@@ -29,6 +37,13 @@ function getQuote () {
     var author = data.author
     quoteEl.textContent = quote;
     authorEl.textContent = author;
+    // update localstorage
+    var storage = JSON.parse(localStorage.getItem("dateNight"));
+    // sets the different values of the date
+    storage[0].quote = quote;
+    storage[0].author = author;
+    // sets the updated array to localstorage
+    localStorage.setItem('dateNight', JSON.stringify(storage));
   })
 }
 

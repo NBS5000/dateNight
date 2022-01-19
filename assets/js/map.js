@@ -118,16 +118,12 @@ function route(alat, alon, blat, blon){
     
         // gets currently stored data
         var storage = JSON.parse(localStorage.getItem("dateNight"));
-        // gets the date object
-        var ls_date = storage[0];
         // sets the different values of the date
-        ls_date.locationName = placeName;
-        ls_date.dateOf = dateDate;
-        ls_date.suburb = suburb;
-        ls_date.lat = $lat;
-        ls_date.lon = $lon;
-        // sets the updated object to the overall array
-        storage[0] = ls_date;
+        storage[0].locationName = placeName;
+        storage[0].dateOf = dateDate;
+        storage[0].suburb = suburb;
+        storage[0].lat = $lat;
+        storage[0].lon = $lon;
         // sets the updated array to localstorage
         localStorage.setItem('dateNight', JSON.stringify(storage));
 
