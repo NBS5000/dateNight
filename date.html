@@ -15,15 +15,17 @@
     <link rel="stylesheet" type="text/css" href="./assets/css/drinks.css"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="./assets/css/jokeQoute.css">
 
 
 </head>
 <body onload="dateLoad()">
-    <header class="jumbotron jumbotron-fluid custom-jumbotron">
-        <div class="text-right">
+    <header>
+       
+        <div class="text-right" id = "date-widget">
             <h3>Current Time &amp; Date: <span id="time-display">00:00:00</span></h3>
             <h3>Date till date night: <span id="left-days-display"></span>00</h3>
-            <div class = "text-center"><h3>Date of date night: <span id="date-of-date-display"></span></h3></div>
+            <div id = "dateOfDate" class = "text-center"><h3>Date of date night: <span id="date-of-date-display"></span></h3></div>
         </div>
     </header>
     <div id="dateContent">
@@ -47,7 +49,18 @@
             <img id="bImg" class="drinkImg" src="" alt="">
             <h3 id="drinksH3"><a id="drinkLink" href="https://drinkwise.org.au/" target="_blank">DRINK RESPONSIBLY</a> </h3>
         </div>
-
+        
+        <!-- Joke and Quote widge -->
+        <div id = "jock-quote-div">
+            <h3 class="joke">Tell this joke if stuck</h3>
+            <p class="jokeOfTheDay"></p>
+        
+            <br>
+        
+            <h3 class = "quots">You can tell this quote as well</h3>
+            <p class="quotsToday"></p>
+            <p class="author"></p>
+        </div>
 
 
 
@@ -91,6 +104,7 @@
     <script src="./assets/js/dateLoad.js"></script>
     <script src="./assets/js/weather.js"></script>
     <script src="./assets/js/drinks.js"></script>
+    <script src="./assets/js/jokeQuote.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
 </body>
 </html>
