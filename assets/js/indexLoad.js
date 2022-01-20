@@ -24,7 +24,10 @@ function indexLoad(){
             cocktail:"",
             cocktailImg:"",
             cocktailImgAlt:"",
-            wentWell:""
+            wentWell:"",
+            clothesImg:"",
+            clothesImgAlt:"",
+            clothesText:""
         }
 
         var list = [];

@@ -85,6 +85,7 @@ function callTom(url){
             $lat = res.results[0].position.lat,
             $lon = res.results[0].position.lon,
             tel = res.results[0].poi.phone,
+            placeName = urlSafe(placeName),
             dateLocation = document.getElementById("search").value = "";
             if(!$lat || !$lon){
                 setTimeout(function(){},1000);

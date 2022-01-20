@@ -33,13 +33,22 @@ function getClothes (query){
             altText = "No alternative text provided by source for search on: " + searchTxt + ".";
         }
 
-        console.log(r + " - src " +imageSrc + " - alt: "+altText);
+        
         document.getElementById("clothesImage").src = imageSrc;
         document.getElementById("clothesImage").alt = altText;
-        document.getElementById("clothingSpan").innerHTML = " for the " + searchTxt;
+        document.getElementById("clothingSpan").innerHTML = "How about this for the " + searchTxt;
 
         
-        /* local storage here*/
+
+        // update localstorage
+        var storage = JSON.parse(localStorage.getItem("dateNight"));
+        // sets the different values of the date
+        storage[0].clothesImg = imageSrc;
+        storage[0].clothesImgAlt = altText;
+        storage[0].clothesText = "How about something like this for the " + searchTxt;
+        // sets the updated array to localstorage
+        localStorage.setItem('dateNight', JSON.stringify(storage));
+
     })
     .catch(function (error) {
         console.log('Clothes search did not work: ' + error);
