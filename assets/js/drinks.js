@@ -33,8 +33,9 @@ function getCocktail(){
             storage[0].cocktail = cocktail;
             storage[0].cocktailImg = cImg;
             storage[0].cocktailImgAlt = cAlt;
+
             // sets the updated array to localstorage
-            localStorage.setItem('dateNight', JSON.stringify(storage));
+            //localStorage.setItem('dateNight', JSON.stringify(storage));
         })
         .catch(function (error) {
             console.log('Cocktail error: ' + error);

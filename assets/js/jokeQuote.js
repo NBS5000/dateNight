@@ -43,7 +43,7 @@ function getQuote () {
     storage[0].quote = quote;
     storage[0].author = author;
     // sets the updated array to localstorage
-    localStorage.setItem('dateNight', JSON.stringify(storage));
+    //localStorage.setItem('dateNight', JSON.stringify(storage));
   })
 }
 

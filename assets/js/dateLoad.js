@@ -10,6 +10,7 @@ function dateLoad(){
 
     urlSearch = window.location.search;
     urlPar = new URLSearchParams(urlSearch);
+    //there is an open date
     if(urlPar.get("yes")){
 
         loadLocal();
@@ -34,16 +35,49 @@ function dateLoad(){
 
 
 function loadLocal(){
+
+    var dateNight={
+        locationName:"",
+        suburb:"",
+        lat:"",
+        lon:"",
+        dateOf:"",
+        temp:"",
+        wind:"",
+        icon:"",
+        rain:"",
+        joke:"",
+        quote:"",
+        author:"",
+        beer:"",
+        beerImg:"",
+        beerImgAlt:"",
+        cocktail:"",
+        cocktailImg:"",
+        cocktailImgAlt:"",
+        wentWell:""
+    }
+
     var storage = JSON.parse(localStorage.getItem("dateNight"));
 
-    var loop = 0;
-    while(loop < storage.length){
+    if(storage){
+        //make dateNight variable point at the object retreived from local storage
+        dateNight = storage;
+        //should now populate GUI with values from dateNight
+        document.getElementById("cityName").textContent = dateNight.suburb;
+        document.getElementById("temp").textContent = dateNight.temp;
+        document.getElementById("wind").textContent = dateNight.wind;
+        
+    }
 
-        var obj = storage[loop];
+    // var loop = 0;
+    // while(loop < storage.length){
+
+    //     var obj = storage[loop];
 
     
 
-    }
+    // }
 
 
 }
