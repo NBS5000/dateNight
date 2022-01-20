@@ -40,6 +40,7 @@ function displayWeather(date){
     var showTemp = Math.round(cityWeather.daily[i].temp.day);
     var showWind = Math.round(cityWeather.daily[i].wind_speed * 3.6);
     var showRain = Math.round(cityWeather.daily[i].rain);
+    var description = cityWeather.daily[i].weather.main;
 
     document.getElementById("temp").innerHTML = showTemp + "&deg;c";
     document.getElementById("wind").innerHTML = "Wind: " + showWind + "kph";
@@ -47,7 +48,6 @@ function displayWeather(date){
     document.getElementById("weatherIcon").src = iconLink;
     document.getElementById("rain").innerHTML = showRain + "mm";
 
-                
     // update localstorage
     var storage = JSON.parse(localStorage.getItem("dateNight"));
     // sets the different values of the date
@@ -57,5 +57,6 @@ function displayWeather(date){
     storage[0].rain = showRain;
     // sets the updated array to localstorage
     localStorage.setItem('dateNight', JSON.stringify(storage));
-}
 
+    getClothes(description);
+}

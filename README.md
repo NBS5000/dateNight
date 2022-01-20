@@ -29,11 +29,11 @@ The premise behind the app
 
 The provided user story was: 
 
-> <span style="font-style:italic">AS A nervous person</span>
+> <span style="font-style:italic">AS A nervous person,</span>
 > 
-> <span style="font-style:italic">I WANT help with confidence when going on a date</span>
+> <span style="font-style:italic">I WANT help with going on a date</span>
 >
-> <span style="font-style:italic">SO THAT I can have a successful date</span>
+> <span style="font-style:italic">SO THAT I can feel confident and be successful</span>
 
 **TASK**
 

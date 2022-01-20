@@ -1,14 +1,14 @@
 #mapWidget{
-    border: slategray 1px solid;
+    /* border: slategray 1px solid; */
     text-align: center;
-    /* width: 700px;*/
-    width: 40%;
+    width: 50%;
     padding: 24px;
-    border-radius: 25px;
-    box-shadow: slategray 5px 5px 10px;
+    /* border-radius: 25px;
+    box-shadow: slategray 5px 5px 10px; */
     display: flex;
     flex-wrap: wrap;
     min-width: 180px;
+    position: relative;
 }
 
 #myMap{
