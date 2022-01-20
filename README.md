@@ -2,11 +2,13 @@
 
 ## <span style="color:green"> The Task</span>
 
-The task was to .....
+Describe the task - as a group we decided on..... how we got to where we did at the start
 
 ### ⭐ ⭐ S.T.A.R. ⭐ ⭐
 
 **SITUATION**
+
+The premise behind the app
 
 The provided user story was: 
 
@@ -18,7 +20,7 @@ The provided user story was:
 
 **TASK**
 
-Provide.......
+how we designed the app to meet the user needs and how it will meet the user needs
 
 **ACTION**
 
@@ -36,12 +38,14 @@ Writing of a solution to resolve the situation, including:
   * *Error free performance*
   * *Multiple functions to separate aspects of code*
   * *Thorough comments*
+* API's connected to throughout the app:
+  * Moment.js - for time handling
+  * 
 * GIT
   * *Numerous commits to track changes in code*
   * *Code added to public repository and Github Pages for public viewing*
 * Functionality
-  * *Feedback to the user as to how well they've done, with a Star Wars twist*
-  * *Hall of Fame to track the best scores, which can be cleared if desired*
+  * something here
 
 **RESULT**
 
