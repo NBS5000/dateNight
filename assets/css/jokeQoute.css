@@ -1,7 +1,6 @@
 #jock-quote-div{
     width: 40%;
     border-radius: 1.5rem;
-    position: absolute;
     box-shadow: slategray 5px 5px 10px;
     padding: 20px;
     
@@ -10,7 +9,7 @@
   #jock-quote-div h3 {
     
     font-size: 1.8rem;
-    color: rgb(72, 14, 83);
+    color: rgb(23, 2, 27);
     padding-left: 1.3rem;
     width: max-content;
     animation: glowBox 6s;
@@ -40,8 +39,10 @@
   }
 
   #date-widget h3 {
+    display: flex;
+    flex-wrap: wrap;
     width: max-content;
-    color: rgba(32, 3, 21, 0.836);
+    color: rgba(14, 2, 9, 0.836);
     animation: glowBox 6s;
     animation-iteration-count: 69;
     border-radius: 0,8rem;
@@ -50,7 +51,8 @@
 
   #dateOfDate {
     display: flex;
-   
-    justify-content: center;
+   justify-content: center;
     text-align: center;
   }
+
+ 
