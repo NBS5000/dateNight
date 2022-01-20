@@ -2,11 +2,7 @@
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:300,400,700);
 @import url(https://cdnjs.cloudflare.com/ajax/libs/weather-icons/1.2/css/weather-icons.min.css);
 
-
-
-
 #weather_wrapper{
-		background: linear-gradient(90deg, #7474BF 10%, #348AC7 90%);
 	width: 400px;
 	margin: 100px auto;
 	font-size: 100%;
@@ -37,24 +33,29 @@
 	right: 0;
 }
 .temp{
-	/* font-size: 80px; */
 	text-align: center;
 	display: block;
 	font-weight: 300;
+    font-size: 200%;
 	color: rgb(255, 255, 255);
 	padding: 0;
+    height: 50%;
 }
-.location{
+#locationDiv{
+    height: 50%;
+}
+#cityName{
 	color: rgb(255, 255, 255);
 	text-align: center;
 	text-transform: uppercase;
-	font-weight: 700;
+	font-weight: bold;
 	font-size: 30px;
-	display: block;
+	display: table-cell;
+    margin: auto;
+    vertical-align: middle;
 }
 .conditions{
 	font-family: weathericons;
-	font-size: 80px;
 	display: block;
 	padding: 20px 0 0;
 	text-align: center;
@@ -78,13 +79,13 @@
 	top: 3px;
 }
 .rain::before{
-	/* display: block;
+	display: block;
 	content: '\f04e';
 	font-family: weathericons;
 	font-size: 40px;
 	left: 6px;
 	top: -4px;
-	position: absolute; */
+	position: absolute;
 }
 .wind {
 	width: 50%;
@@ -94,13 +95,13 @@
 	top: 3px;
 }
 .wind::before{
-	/* display: block;
+	display: block;
 	content: '\f050';
 	font-family: weathericons;
 	font-size: 25px;
 	left: -10px;
 	position: absolute;
-	top: 5px; */
+	top: 5px;
 }
 
 

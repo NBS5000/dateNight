@@ -87,6 +87,10 @@ h1{
     max-height: 450px;
 }
 
+#dateContent{
+	display: flex;
+	flex-wrap: wrap;
+}
 
 
 

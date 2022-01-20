@@ -4,42 +4,35 @@ function indexLoad(){
     var dateNight = JSON.parse(localStorage.getItem("dateNight"));
     /* if dateNight is empty, set event items */
     if(!dateNight){
-        debugger;
-        var date={
+        var dateNight={
             locationName:"",
             suburb:"",
             lat:"",
             lon:"",
-            dateOf:""
-        }
-        var weather={
+            dateOf:"",
             temp:"",
             wind:"",
             icon:"",
-            humid:""
-        }
-        var jokeQuote={
+            rain:"",
             joke:"",
             quote:"",
-            author:""
-        }
-        var drinks={
+            author:"",
             beer:"",
             beerImg:"",
-            cockail:"",
-            cocktailImg:""
-        }
-        var assess={
+            beerImgAlt:"",
+            cocktail:"",
+            cocktailImg:"",
+            cocktailImgAlt:"",
             wentWell:""
         }
 
         var list = [];
-        list.push(date,weather,jokeQuote,drinks,assess);
+        list.push(dateNight);
 
         localStorage.setItem("dateNight",JSON.stringify(list));
         var dateNight = JSON.parse(localStorage.getItem("dateNight"));
     }
-    if(dateNight[4].wentWell != "Yes" && (dateNight[0].locationName != "" && dateNight[0].locationName != null)){
+    if(dateNight.wentWell != "Yes" && (dateNight.locationName != "" && dateNight.locationName != null)){
         /* if the response to the assessment hasn't been set but 
         there is a location, it means the date is 'open', we 
         should load the details that were set when the date was 
