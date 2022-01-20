@@ -56,7 +56,7 @@ function loadLocal(){
     document.getElementById("bImg").src = storage[0].beerImg;
     document.getElementById("bImg").alt = storage[0].beerImgAlt;
     /* set clothes */
-    document.getElementById("clothesImage").src = storage[0].clothesImg;;
+    document.getElementById("clothesImage").src = storage[0].clothesImg;
     document.getElementById("clothesImage").alt = storage[0].clothesImgAlt;
     document.getElementById("clothingSpan").innerHTML = storage[0].clothesText;
     /* set date */
