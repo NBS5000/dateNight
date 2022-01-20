@@ -39,11 +39,13 @@ function displayWeather(date){
     var iconLink = "http://openweathermap.org/img/w/" + icon + ".png";
     var showTemp = Math.round(cityWeather.daily[i].temp.day);
     var showWind = Math.round(cityWeather.daily[i].wind_speed * 3.6);
+    var showRain = Math.round(cityWeather.daily[i].rain);
 
     document.getElementById("temp").innerHTML = showTemp + "&deg;c";
     document.getElementById("wind").innerHTML = "Wind: " + showWind + "kph";
     document.getElementById("cityName").innerHTML = suburb;
     document.getElementById("weatherIcon").src = iconLink;
+    document.getElementById("rain").innerHTML = showRain + "mm";
 
                 
     // update localstorage
@@ -52,6 +54,7 @@ function displayWeather(date){
     storage[0].icon = iconLink;
     storage[0].temp = showTemp;
     storage[0].wind = showWind;
+    storage[0].rain = showRain;
     // sets the updated array to localstorage
     localStorage.setItem('dateNight', JSON.stringify(storage));
 }
