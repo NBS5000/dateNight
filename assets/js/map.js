@@ -14,6 +14,8 @@ if(btn){
     btn.addEventListener("click",function(){
         /* hard coded for testing */
         // var dateLocation = "mumbo jumbo terrigal";
+
+
         var dateLocation = document.getElementById("search").value;
         dateDate = document.getElementById("datePicker").value;
         if(dateLocation && dateDate){
@@ -124,6 +126,7 @@ function route(alat, alon, blat, blon){
         storage[0].suburb = suburb;
         storage[0].lat = $lat;
         storage[0].lon = $lon;
+        storage[0].wentWell = "";
         // sets the updated array to localstorage
         localStorage.setItem('dateNight', JSON.stringify(storage));
 
