@@ -13,6 +13,7 @@
     <link rel="stylesheet" type="text/css" href="./assets/css/main.css"/>
     <link rel="stylesheet" type="text/css" href="./assets/css/map.css"/>
     <link rel="stylesheet" type="text/css" href="./assets/css/clothes.css"/>
+    <link rel="stylesheet" type="text/css" href="./assets/css/modal.css"/>
     <link rel="stylesheet" type="text/css" href="./assets/css/drinks.css"/>
     <link rel="stylesheet" type="text/css" href="./assets/css/dateHeader.css"/>
     <link rel="stylesheet" type="text/css" href="./assets/css/weather.css"/>
@@ -27,9 +28,9 @@
 <body onload="dateLoad()">
     <header>
         <div class="text-right" id = "date-widget">
-            <h1 id="bannerTitle">Date Night!</h1>
+            <h1 id="bannerTitle">Date Night!</h1><br/>
             <h3 id="reminder"><span id="time-display"></span></h3>
-            <h3>Date till date night: <span id="left-days-display"></span></h3>
+            <h3><span id="left-days-display"></span> to go</h3>
             <div id = "dateOfDate" class = "text-center"><h3>Be at&nbsp;<span id="dateLocation"></span>&nbsp;on&nbsp;<span id="date-of-date-display"></span><br/>Don't be late!</h3></div>
             
         </div>
@@ -38,8 +39,8 @@
     <!----------HTML to assess the date--------------------------------------------------------------------------------------------------------------->
 
     <input type="checkbox" name="assessCheckbox" id="assessCheckbox">
-    <label for="assessCheckbox"> Assess your last date</label>
-    <button type="button" id="assessBtn" hidden>Assess Now!</button>
+    <label for="assessCheckbox"> Want to tell us about your date?</label><br/>
+    <button type="button" id="assessBtn" hidden>Feedback</button>
 
 
 
@@ -50,15 +51,19 @@
         <!-- Modal content -->
         <div class="modal-content">
 
-            <span>How did the date go?</span>
+            <h2 id="asking">How did the date go?</h2>
 
 
-            <button id="assessYesBtn" class="conCan">Great!</button>
-            <button id="assessNoBtn" class="conCan">Not so well :(</button>
+            <button id="assessYesBtn" class="goodBad">Great!</button>
+            <button id="assessNoBtn" class="goodBad">Not so well :(</button>
             
         </div>
     
     </div>
+
+
+
+    
     <!----------------->
 
     <!------------------------------------------------------------------------------------------------------------------------>
@@ -151,6 +156,7 @@
     <script src="./assets/js/weather.js"></script>
     <script src="./assets/js/clothes.js"></script>
     <script src="./assets/js/drinks.js"></script>
+    <script src="./assets/js/modal.js"></script>
     <script src="./assets/js/jokeQuote.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
 </body>

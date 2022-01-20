@@ -40,8 +40,6 @@ canxBtn.addEventListener("click",function(){
 // When the user clicks anywhere outside of the modal, close it
 window.onclick = function(event) {
     if (event.target == modal) {
-        document.getElementById("search").value = "";
-        document.getElementById("datePicker").value = "";
         modal.style.display = "none";
     }
 }

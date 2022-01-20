@@ -3,6 +3,8 @@ document.getElementById('assessCheckbox').addEventListener('change', e => {
     if(e.target.checked){
         //make the modal assess button visible
         document.getElementById("assessBtn").hidden = false;
+    }else{
+        document.getElementById("assessBtn").hidden = true;
     }
 
 });
@@ -39,4 +41,9 @@ document.getElementById("assessNoBtn").addEventListener("click",function(){
     //close modal after storing no
     assessModal.style.display = "none";
 });
-
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == assessModal) {
+        assessModal.style.display = "none";
+    }
+}
