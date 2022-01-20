@@ -2,11 +2,28 @@
 
 ## <span style="color:green"> The Task</span>
 
+
+Steps that have been done to get the result:
+
+* Drawing a flow chart to breake down the code.
+
+* Listing all the APIs we need for the App.
+
+* Splitig tasks for each contributer to do.
+
+* Discussig the results and debuging the code together.
+
+
+* 
 Describe the task - as a group we decided on..... how we got to where we did at the start
 
 ### ⭐ ⭐ S.T.A.R. ⭐ ⭐
 
 **SITUATION**
+
+As agroup we decided to build an app that helps a nervous person to schadule his date and get adirection, 
+
+knows the weather on that date, clothes, drinks, joke and quot sugestions.
 
 The premise behind the app
 
@@ -63,22 +80,24 @@ The end code is stored on Github, and publicly available and viewable. This resu
 * WHEN I respond with yes or no,
 * THEN suggestions are made (yes offers events to watch for next date & wedding rings, no offers 'this person doesn't exist / foaas')
 
-## <span style="color:green"> The Outcome</span>
+## Instalation
 
+Please use the following link to view the web page [GitHub Pages](https://nbs5000.github.io/dateNight).
 
-> There is a new Google feature named FLoc that is generating the below error. This is not a result of the performance or design of the site.
-> 
-> ![Screenshot of Google FLoC error](./assets/images/floc.PNG "Screenshot of Google FLoC error")
-> 
-> [Google FLoC](https://techcrunch.com/2021/03/30/google-starts-trialling-its-floc-cookie-alternative-in-chrome/)
+GitHub link : [Projet 1](https://github.com/NBS5000/dateNight).
 
-You can view the finished product [HERE](https://nbs5000.github.io/dateNight/)
+## Usage
 
-Alternatively, here is a screenshot:
+Alternatively, here is a screenshots:
 
-> ![Screenshot of Date Night! page](./assets/images/screen.png "Screenshot of Date Night!")
+* Screenshot of loading page:
+
+    > ![Screenshot loading page](./assets/images/screen-1.png)
+
+* Screenshot of date page:
+
+    > ![Screenshot date page](./assets/images/screen-2.png)
 
 ---
-<p style="text-align:center;">Written by <span style="font-style:italic">Steve Barry</span> - Due date 23/12/2021</p>
 
 <p style="text-align:center;">© 2021 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.</p>
