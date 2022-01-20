@@ -1,6 +1,7 @@
 
 
 function indexLoad(){
+    debugger;
     var dateNight = JSON.parse(localStorage.getItem("dateNight"));
     /* if dateNight is empty, set event items */
     if(!dateNight){
@@ -32,7 +33,7 @@ function indexLoad(){
         localStorage.setItem("dateNight",JSON.stringify(list));
         var dateNight = JSON.parse(localStorage.getItem("dateNight"));
     }
-    if(dateNight.wentWell != "Yes" && (dateNight.locationName != "" && dateNight.locationName != null)){
+    if((dateNight[0].wentWell == null || dateNight[0].wentWell == "") && (dateNight[0].locationName != "" && dateNight[0].locationName != null)){
         /* if the response to the assessment hasn't been set but 
         there is a location, it means the date is 'open', we 
         should load the details that were set when the date was 
@@ -46,5 +47,4 @@ function indexLoad(){
         document.getElementById("modalBtnAssess").hidden = true;
         document.getElementById("modalBtn").hidden = false;
     }
-
 }
