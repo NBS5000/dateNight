@@ -26,7 +26,6 @@ var modalBtnAss = document.getElementById("modalBtnAssess");
 modalBtnAss.addEventListener("click",function(){
     var dateUrl = "./date.html?open=yes";
     document.location.href = dateUrl;
-
 });
 
 // When the user clicks the "Cancel" button, close the modal and clear fields
@@ -41,13 +40,11 @@ canxBtn.addEventListener("click",function(){
 // When the user clicks anywhere outside of the modal, close it
 window.onclick = function(event) {
     if (event.target == modal) {
-        document.getElementById("search").value = "";
-        document.getElementById("datePicker").value = "";
         modal.style.display = "none";
     }
 }
 /* the below limits to range to what the weather widget can provide */
 var today = new Date().toISOString().split('T')[0];
-var fiveDays = new Date(moment(today).add(6,"days")).toISOString().split('T')[0];
+var fiveDays = new Date(moment(today).add(7,"days")).toISOString().split('T')[0];
 document.getElementsByName("datePicker")[0].setAttribute('min', today);
 document.getElementsByName("datePicker")[0].setAttribute('max', fiveDays);

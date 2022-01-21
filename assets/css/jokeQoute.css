@@ -1,58 +1,24 @@
 #jock-quote-div{
-    width: 40%;
-    border-radius: 1.5rem;
-    box-shadow: slategray 5px 5px 10px;
-    padding: 20px;
-    
-  }
-  
-  #jock-quote-div h3 {
-    
-    font-size: 1.8rem;
-    color: rgb(23, 2, 27);
-    padding-left: 1.3rem;
-    width: max-content;
-    animation: glowBox 6s;
-    animation-iteration-count: 99;
-    border-radius: 0,8rem;
-  } 
-  
-  
-  
-  #jock-quote-div p {
-    font-size: 1.3rem;
-    color: rgb(9, 42, 80);
-    padding-left: 1.3rem;
-    font-weight: bold;
-  }
+  width: 30%;
+  border-radius: 1.5rem;
+  /* box-shadow: slategray 5px 5px 10px; */
+  padding: 20px;
+  text-align: center !important;
+}
 
-  #date-widget {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    height: 15vh;
-    font-family: sans-serif;
-    background-color: rgba(190, 214, 236, 0.459) ;
-    
-    box-shadow: slategray 5px 5px 10px;
-    padding: 15px  0 0 15px;
-  }
+#jock-quote-div h3 {
+  font-size: 1.8rem;
+  /* color: rgb(23, 2, 27); */
+  color: beige;
+  width: max-content;
+  /* animation: glowBox 6s;
+  animation-iteration-count: 99; */
+  text-align: center !important;
+} 
 
-  #date-widget h3 {
-    display: flex;
-    flex-wrap: wrap;
-    width: max-content;
-    color: rgba(14, 2, 9, 0.836);
-    animation: glowBox 6s;
-    animation-iteration-count: 69;
-    border-radius: 0,8rem;
-    
-  }
-
-  #dateOfDate {
-    display: flex;
-   justify-content: center;
-    text-align: center;
-  }
-
- 
+#jock-quote-div p {
+  font-size: 1.3rem;
+  /* color: rgb(9, 42, 80); */
+  color: beige;
+  /* font-weight: bold; */
+}

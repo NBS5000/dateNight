@@ -13,8 +13,10 @@ var btn = document.getElementById("confirm");
 if(btn){
     btn.addEventListener("click",function(){
         /* hard coded for testing */
-        var dateLocation = "mumbo jumbo terrigal";
-        // var dateLocation = document.getElementById("search").value;
+        // var dateLocation = "mumbo jumbo terrigal";
+
+
+        var dateLocation = document.getElementById("search").value;
         dateDate = document.getElementById("datePicker").value;
         if(dateLocation && dateDate){
             address(dateLocation);
@@ -49,7 +51,7 @@ function address (loc){
 
 
 }
-
+/* remove unsafe chars from string */
 function urlSafe(location){
     var x = encodeURIComponent(location);
     return x;
@@ -111,12 +113,11 @@ function route(alat, alon, blat, blon){
                 // console.log("0.5 second delay");
             },500);
         }
-        var dateUrl = "./date.html?lat="+$lat+"&lon="+$lon+"&date="+dateDate+"&dist="+jDist+"&time="+jTime+"&place="+placeName+"&suburb="+suburb;
+        var dateUrl = "./date.html?lat="+$lat+"&lon="+$lon+"&date="+dateDate+"&place="+placeName+"&suburb="+suburb;
         jDist = res.routes[0].summary.lengthInMeters;
         jTime = res.routes[0].summary.travelTimeInSeconds;
 
         /* local storage */
-    
         // gets currently stored data
         var storage = JSON.parse(localStorage.getItem("dateNight"));
         // sets the different values of the date
@@ -125,6 +126,7 @@ function route(alat, alon, blat, blon){
         storage[0].suburb = suburb;
         storage[0].lat = $lat;
         storage[0].lon = $lon;
+        storage[0].wentWell = "";
         // sets the updated array to localstorage
         localStorage.setItem('dateNight', JSON.stringify(storage));
 
@@ -135,7 +137,3 @@ function route(alat, alon, blat, blon){
         console.log('Route did not work: ' + error);
     });
 }
-
-
-
-

@@ -1,7 +1,6 @@
 
 
 function indexLoad(){
-    debugger;
     var dateNight = JSON.parse(localStorage.getItem("dateNight"));
     /* if dateNight is empty, set event items */
     if(!dateNight){

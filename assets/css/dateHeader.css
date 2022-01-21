@@ -1,0 +1,29 @@
+#date-widget {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    height: 15vh;
+    font-family: sans-serif;
+    background-color: rgba(190, 214, 236, 0.459) ;
+    box-shadow: slategray 5px 5px 10px;
+    padding: 15px  0 0 15px;
+  }
+  
+  #date-widget h3 {
+    /* display: flex;
+    flex-wrap: wrap; */
+    width: max-content;
+    color: beige;
+    /* animation: glowBox 6s;
+    animation-iteration-count: 69; */
+    border-radius: 0,8rem;
+  }
+  #reminder{
+    color: beige;
+  }
+  
+  #dateOfDate {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+  }
