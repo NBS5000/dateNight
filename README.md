@@ -55,6 +55,7 @@ THEN suggestions are made (yes offers events to watch for next date & wedding ri
 
 
 
+
 **ACTION**
 
 Writing of a solution to resolve the situation, including:

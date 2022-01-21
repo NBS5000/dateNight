@@ -59,7 +59,8 @@ label{
     animation: glowBox 4s;
     animation-iteration-count: 99;
 }
-.conCan{
+
+.conCan, .goodBad, #assessBtn{
     margin: 5px 25px;
     width: 100px;
     height: 40px;
@@ -69,4 +70,14 @@ label{
     color: white;
     font-weight: bold;
     font-size: 120%;
+}
+#asking{
+    text-align: center;
+}
+.goodBad{
+    width: 50%;
+    margin: 10px auto;
+}
+#assessBtn{
+    position: absolute;
 }

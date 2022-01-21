@@ -13,7 +13,9 @@
     <link rel="stylesheet" type="text/css" href="./assets/css/main.css"/>
     <link rel="stylesheet" type="text/css" href="./assets/css/map.css"/>
     <link rel="stylesheet" type="text/css" href="./assets/css/clothes.css"/>
+    <link rel="stylesheet" type="text/css" href="./assets/css/modal.css"/>
     <link rel="stylesheet" type="text/css" href="./assets/css/drinks.css"/>
+    <link rel="stylesheet" type="text/css" href="./assets/css/dateHeader.css"/>
     <link rel="stylesheet" type="text/css" href="./assets/css/weather.css"/>
 
     
@@ -26,18 +28,20 @@
 <body onload="dateLoad()">
     <header>
         <div class="text-right" id = "date-widget">
-            <h3>Current Time &amp; Date: <span id="time-display">00:00:00</span></h3>
-            <h3>Date till date night: <span id="left-days-display"></span></h3>
-            <div id = "dateOfDate" class = "text-center"><h3>Date of date night: <span id="date-of-date-display"></span></h3></div>
-            <div id="dateLocation"></div>
+            <h1 id="bannerTitle">Date Night!</h1><br/>
+            <h3 id="reminder"><span id="time-display"></span></h3>
+            <h3><span id="left-days-display"></span> to go</h3>
+            <div id = "dateOfDate" class = "text-center"><h3>Be at&nbsp;<span id="dateLocation"></span>&nbsp;on&nbsp;<span id="date-of-date-display"></span><br/>Don't be late!</h3></div>
+            
         </div>
+        <button type="button" id="logOut" onclick="location.href = 'index.html';">Log Out</button>
     </header>
 
     <!----------HTML to assess the date--------------------------------------------------------------------------------------------------------------->
 
     <input type="checkbox" name="assessCheckbox" id="assessCheckbox">
-    <label for="assessCheckbox"> Assess your last date</label>
-    <button type="button" id="assessBtn" hidden>Assess Now!</button>
+    <label for="assessCheckbox"> Want to tell us about your date?</label><br/>
+    <button type="button" id="assessBtn" hidden>Feedback</button>
 
 
 
@@ -48,15 +52,19 @@
         <!-- Modal content -->
         <div class="modal-content">
 
-            <span>How did the date go?</span>
+            <h2 id="asking">How did the date go?</h2>
 
 
-            <button id="assessYesBtn" class="conCan">Great!</button>
-            <button id="assessNoBtn" class="conCan">Not so well :(</button>
+            <button id="assessYesBtn" class="goodBad">Great!</button>
+            <button id="assessNoBtn" class="goodBad">Not so well :(</button>
             
         </div>
     
     </div>
+
+
+
+    
     <!----------------->
 
     <!------------------------------------------------------------------------------------------------------------------------>
@@ -64,13 +72,37 @@
     <div id="dateContent">
     <!-- Start of Content -->
 
+            <!--Weather Widget to display weather info-->
+            <div id="weather_wrapper">
+                <div class="weatherCard">
+                    <div class="currentTemp">
+                        <span id="temp" class="temp"></span>
+                        <div id="locationDiv">
+                            <span id="cityName" class="location"></span>
+                        </div>
+                    </div>
+                    <div class="currentWeather">
+                        <span class="conditions">
+                            <img id="weatherIcon" src="">
+                        </span>
+                        <div class="info">
+                            <span id="rain" class="rain"></span>
+                            <span id="wind" class="wind"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
+    <!-- Map of date location -->
+        <div id="mapWidget">
+            <div id="myMap"></div>  
+        </div>
         <!-- Clothing widget -->
         <div id="clothingWidget">
-            <img id="clothesImage" src="https://images.unsplash.com/photo-1640576578061-7e9411975512?ixid=MnwyOTE2MDV8MHwxfHNlYXJjaHw1fHxob3QlMjBjbG90aGluZ3xlbnwwfDF8fHwxNjQyMzQwMjA5\u0026ixlib=rb-1.2.1" alt="No Image source">
+            <img id="clothesImage" src="" alt="">
             <div id="clothingTextDiv" >
-                <h3 class="clothingText" id="clothingH3">And what to wear....?</h3>
-                <p class="clothingText">How about something like this<span id="clothingSpan"></span>?</p>
+                <h3 class="clothingText" id="clothingH3">What to wear....?</h3>
+                <p class="clothingText" id="clothingP">You're sure to look good in this</p>
             </div>
         </div>
         
@@ -87,45 +119,23 @@
         
         <!-- Joke and Quote widge -->
         <div id = "jock-quote-div">
-            <h3 class="joke">Tell this joke if stuck</h3>
+            <h3 class="joke" >Make them laugh!</h3>
             <p class="jokeOfTheDay"></p>
         
             <br>
         
-            <h3 class = "quots">You can tell this quote as well</h3>
+            <h3 class = "quots" id="quoteH3">Make them think...</h3>
             <p class="quotsToday"></p>
-            <p class="author"></p>
+            <em><p class="author"></p></em>
         </div>
 
 
 
 
 
-        <!--Weather Widget to display weather info-->
-        <div id="weather_wrapper">
-            <div class="weatherCard">
-                <div class="currentTemp">
-                    <span id="temp" class="temp"></span>
-                    <div id="locationDiv">
-                        <span id="cityName" class="location"></span>
-                    </div>
-                </div>
-                <div class="currentWeather">
-                    <span class="conditions">
-                        <img id="weatherIcon" src="http://openweathermap.org/img/wn/10d@2x.png">
-                    </span>
-                    <div class="info">
-                        <span id="rain" class="rain"></span>
-                        <span id="wind" class="wind"></span>
-                    </div>
-                </div>
-            </div>
-        </div>
 
-    <!-- Map of date location -->
-        <div id="mapWidget">
-            <div id="myMap">
-        </div>  
+
+
 
 
 
@@ -145,7 +155,9 @@
     <script src="./assets/js/dateDisplay.js"></script>
     <script src="./assets/js/dateLoad.js"></script>
     <script src="./assets/js/weather.js"></script>
+    <script src="./assets/js/clothes.js"></script>
     <script src="./assets/js/drinks.js"></script>
+    <script src="./assets/js/modal.js"></script>
     <script src="./assets/js/jokeQuote.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
 </body>

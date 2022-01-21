@@ -1,10 +1,14 @@
-
+/*
+Project 1
+Date Night
+- Steve Barry- Samer Balee - Mona Mahmoud - Joel Shewan -
+Javascript file handling beer and cocktail suggestion
+*/
 var cocktail, cImg, cAlt, beer, bImg, bAlt;
 var ctUrl = "https://www.thecocktaildb.com/api/json/v1/1/random.php";
 var brUrl = "https://api.punkapi.com/v2/beers/random";
 
 function getCocktail(){
-
     fetch(ctUrl)
         .then(
             (res) => res.json()
@@ -19,14 +23,13 @@ function getCocktail(){
             }
         })
         .then(function(){
-
-        
             if(!cocktail || !cImg || !cAlt){
                 setTimeout(100);
             }
             document.getElementById("cName").innerHTML = "Why not give the " + cocktail + " a try?",
             document.getElementById("cImg").src = cImg,
             document.getElementById("cImg").alt = cAlt
+            
             // update localstorage
             var storage = JSON.parse(localStorage.getItem("dateNight"));
             // sets the different values of the date
@@ -75,4 +78,3 @@ function getBeer(){
             console.log('Beer error: ' + error);
         });
 }
-
