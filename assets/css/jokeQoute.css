@@ -1,24 +1,45 @@
 #jock-quote-div{
   width: 30%;
   border-radius: 1.5rem;
-  /* box-shadow: slategray 5px 5px 10px; */
+  box-shadow: rgb(216, 221, 221) 5px 5px 10px;
   padding: 20px;
+  border: 3px solid rgb(216, 221, 221);
   text-align: center !important;
 }
 
 #jock-quote-div h3 {
   font-size: 1.8rem;
-  /* color: rgb(23, 2, 27); */
   color: beige;
-  width: max-content;
-  /* animation: glowBox 6s;
-  animation-iteration-count: 99; */
   text-align: center !important;
 } 
 
 #jock-quote-div p {
   font-size: 1.3rem;
-  /* color: rgb(9, 42, 80); */
   color: beige;
-  /* font-weight: bold; */
+}
+
+@media screen and (min-width: 887px) and (max-width: 1024px) {
+
+  #jock-quote-div{
+  width: 50%;
+  height: auto;
+  }
+}
+
+@media screen and (max-width: 887px){
+
+  #jock-quote-div {
+  width: 48%;
+  height: auto;
+  }
+
+}
+
+@media screen and (max-width: 778px) {
+
+  #jock-quote-div {
+  width: 90%;
+  height: auto;
+  }
+
 }

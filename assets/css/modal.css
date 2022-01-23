@@ -44,6 +44,8 @@ Taken from w3schools, linked with modal section in HTML and modal.js*/
 }
 label{
     display: block;
+    color: black;
+    font-size: larger;
 }
 .modalBtnC{
     position: relative;

@@ -5,10 +5,13 @@
     padding: 24px;
     /* border-radius: 25px;
     box-shadow: slategray 5px 5px 10px; */
+    box-shadow: rgb(216, 221, 221) 5px 5px 10px;
     display: flex;
     flex-wrap: wrap;
     min-width: 180px;
     color: beige;
+    border: 3px solid rgb(216, 221, 221);
+    border-radius: 1.5rem;
 }
 
 #clothesImage{
@@ -55,4 +58,22 @@
     50% {box-shadow: 0px 0px 15px pink;color:pink}
     75% {box-shadow: 0px 0px 10px purple;color:purple}
     100% {box-shadow: 0px 0px 5px red;color:red}
+}
+
+@media screen and (min-width: 887px) and (max-width: 1024px) {
+
+    #clothingWidget {
+    width: 50%;
+    height: auto;
+    }
+
+}
+
+@media screen and (max-width: 778px) {
+
+    #clothingWidget , #mapWidget {
+    width: 90%;
+    height: auto;
+    }
+
 }
