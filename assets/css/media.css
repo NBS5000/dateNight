@@ -25,6 +25,9 @@ Media CSS file
         padding:0;
         margin:0  auto;
     }
+    #mainTitle{
+        font-size: 500%;
+    }
 }
 @media screen and (max-width:1060px) and (min-width:650px) {
 
@@ -45,6 +48,9 @@ Media CSS file
         width: 90%;
         padding:0;
         margin:0  auto;
+    }
+    #mainTitle{
+        font-size: 400%;
     }
 }
 /* when screen at below size, set answers to appear 4 rows of 1 wide*/
@@ -72,5 +78,9 @@ Media CSS file
         width: 90%;
         padding:0;
         margin:0  auto;
+    }
+    #mainTitle{
+        font-size: 300%;
+        
     }
 }

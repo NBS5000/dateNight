@@ -52,6 +52,7 @@ label{
     top: 50px;
     height: 100px;
     width: 60%;
+    min-width: 160px;
     font-size: 200%;
     border-radius: 30px;
     background-color: white;
