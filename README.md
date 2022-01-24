@@ -2,23 +2,21 @@
 
 ## Description
 
-As agroup we decided to build an app that helps a nervous person to schadule his date and get a direction, 
+As a group we decided to build an app that helps a nervous person to schedule his date and get a direction, 
 
-knows the weather on that date, clothes, drinks, joke and quote sugestions.
+knows the weather on that date, clothes, drinks, joke and quote suggestions.
 
  Steps that have been done to get the result:
 
-* Identify real world problem to adress.
+* Identify real world problem to address.
 
-* Drawing a flow chart to breake down the code.
+* Drawing a flow chart to break down the code.
 
 * Listing all the APIs we need for the App.
 
-* Spliting tasks for each contributer to do.
+* Splitting tasks for each contributor to do.
 
-* Discussing the results and debuging the code together.
-
-### ⭐ ⭐ S.T.A.R. ⭐ ⭐
+* Discussing the results and debugging the code together.
 
 ## User Story
 
@@ -41,7 +39,7 @@ THEN the site offers a joke, quote, and drinks suggestions
 WHEN the date is over
 THEN the website asks if it went well
 WHEN I respond with yes or no,
-THEN suggestions are made (yes offers events to watch for next date & wedding rings, no offers 'this person doesn't exist / foaas')
+THEN a comedic response is given.
 ```
 
 ## Technologies
@@ -51,9 +49,7 @@ THEN suggestions are made (yes offers events to watch for next date & wedding ri
 * JAVASCRIPT
 * JQUERY
 * MOMENTJS
-* APIs (tomtom, openweathermap, unsplash, jokes, quotable and thecocktaildb)
-
-
+* APIs (tomtom, openweathermap, unsplash, jokes, quotable, moment, jQuery, brewdog, and thecocktaildb)
 
 
 **ACTION**
@@ -79,13 +75,13 @@ Writing of a solution to resolve the situation, including:
   * *Code added to public repository and Github Pages for public viewing*
 
 
-## Instalation
+## Installation
 
 Please use the following link to view the web page [GitHub Pages](https://nbs5000.github.io/dateNight).
 
-GitHub link : [Projet 1](https://github.com/NBS5000/dateNight).
+GitHub link : [Project 1](https://github.com/NBS5000/dateNight).
 
-## Contributers
+## Contributors
 
 * Steve Barry
 * Mona Mahmoud
