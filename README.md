@@ -90,20 +90,30 @@ GitHub link : [Project 1](https://github.com/NBS5000/dateNight).
 
 ## Usage
 
+Here is a video link of the app in use: 
+[Date Night!](https://watch.screencastify.com/v/EnjlnMk0EY8Nm0eC7Khx).
+
 Alternatively, here are a screenshots:
 
-* Screenshot of loading page:
+* The Welcome page:
 
-    > ![Screenshot loading page](assets/images/screenshot-1.PNG)
+    > ![Welcome Page](assets/images/begin.PNG)
 
-* Screenshot of user input:
+* The User Input modal:
 
-    > ![Screenshot user input](assets/images/screenshot-1.PNG)
+    > ![Screenshot user input](assets/images/location.PNG)
 
-* Screenshot of date page:
+* The Date page:
 
-    > ![Screenshot date page](assets/images/screenshot-2.PNG)
+    > ![Screenshot date page](assets/images/theDate.PNG)
 
+* The 'open date' Welcome page:
+
+    > ![Screenshot date page](assets/images/assess.PNG)
+
+* The Assessment modal:
+
+    > ![Screenshot date page](assets/images/assess.PNG)
 
 ---
 
