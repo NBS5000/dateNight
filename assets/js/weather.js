@@ -43,9 +43,12 @@ function displayWeather(date){
     var description = cityWeather.daily[i].weather.main;
 
     document.getElementById("temp").innerHTML = showTemp + "&deg;c";
-    document.getElementById("wind").innerHTML = "Wind: " + showWind + "kph";
+    document.getElementById("wind").innerHTML = showWind + "kph";
     document.getElementById("cityName").innerHTML = suburb;
     document.getElementById("weatherIcon").src = iconLink;
+    if(!parseInt(showRain)){
+        showRain = 0;
+    }
     document.getElementById("rain").innerHTML = showRain + "mm";
 
     // update localstorage
