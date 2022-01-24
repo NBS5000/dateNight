@@ -27,7 +27,7 @@ body {
 }
 
 #content{
-    width: 50%;
+    width: 90%;
     margin: 0 auto;
     text-align: center;
 }
@@ -42,22 +42,25 @@ body {
 #mainTitle{
     animation: glow 4s;
     animation-iteration-count: 99;
-    font-size: 700%;
-    margin: 10%;
+    font-size: 600%;
+    width: 50%;
+    margin: 0 auto;
+    margin-top: 10%;
     font-family: fantasy;
+    text-align: center;
 }
-/* 
+/*
 #modalBtn{
     position: relative;
     top: 50px;
     height: 100px;
     width: 60%;
+    min-width: 160px;
     font-size: 200%;
     border-radius: 30px;
     background-color: white;
     box-shadow: 2px 2px 8px;
 }
-
 #modalBtn:hover,.conCan:hover{
     animation: glowBox 4s;
     animation-iteration-count: 99;
