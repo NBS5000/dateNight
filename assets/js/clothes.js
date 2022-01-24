@@ -26,11 +26,10 @@ function getClothes (query){
         altText = res.results[r].urls.alt_description;
         if(!altText || altText == null){
             // in case the image doesn't have alt text
-            altText = "No alternative text provided by source for search on: " + searchTxt + ".";
+            altText = "No alternative text provided by source for this clothing.";
         }
         document.getElementById("clothesImage").src = imageSrc;
         document.getElementById("clothesImage").alt = altText;
-        document.getElementById("clothingSpan").innerHTML = "How about this for the " + searchTxt;
 
         // update localstorage
         var storage = JSON.parse(localStorage.getItem("dateNight"));

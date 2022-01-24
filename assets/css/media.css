@@ -18,7 +18,7 @@ Media CSS file
     #clothesImage{
         margin: 20px auto;
         align-content: center;
-        width: 90%;
+        width: 100%;
     }
     #clothingTextDiv{
         width: 90%;
@@ -42,7 +42,7 @@ Media CSS file
     #clothesImage{
         margin: 20px auto;
         align-content: center;
-        width: 90%;
+        width: 100%;
     }
     #clothingTextDiv{
         width: 90%;
@@ -53,7 +53,6 @@ Media CSS file
         font-size: 400%;
     }
 }
-/* when screen at below size, set answers to appear 4 rows of 1 wide*/
 @media screen and (max-width:650px) {
     .clothingText{
         width: 100%;
@@ -68,6 +67,7 @@ Media CSS file
     }
     #clothesImage{
         margin: 15px auto;
+        width: 100%;
     }
     #clothingRec{
         width: 40%;
@@ -75,7 +75,7 @@ Media CSS file
     
     }
     #clothingTextDiv{
-        width: 90%;
+        width: 100%;
         padding:0;
         margin:0  auto;
     }

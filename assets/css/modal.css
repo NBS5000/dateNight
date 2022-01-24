@@ -84,3 +84,6 @@ label{
 #assessBtn{
     position: absolute;
 }
+#assessCheckbox{
+    margin-left: 15px;
+}

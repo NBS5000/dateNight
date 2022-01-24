@@ -1,7 +1,7 @@
 #bannerTitle {
   font-weight: 800;
   font-family: 'Source Sans Pro', sans-serif;
-  color: rgb(78, 7, 57);
+  color: beige;
 }
 
 
@@ -13,20 +13,37 @@
     font-family: sans-serif;
     box-shadow: rgb(216, 221, 221) 5px 5px 10px;
     padding: 15px  0 0 15px;
-  }
+    text-align: center;
+}
   
-  #date-widget h3 {
+#date-widget h3 {
     color: beige;
     border-radius: 0,8rem;
-  }
-  #reminder{
+}
+#reminder{
     color: beige;
-  }
+}
   
-  #dateOfDate {
+#dateOfDate {
     display: flex;
     justify-content: center;
     text-align: center;
-  }
-
-  
+}
+#logOut{
+    position: absolute;
+    margin-bottom: 10px;
+    margin-left: 10px;
+    top: 15px;
+    right: 15px;
+    height: 30px;
+    width: 120px;
+    min-width: 160px;
+    font-size: 100%;
+    border-radius: 30px;
+    background-color: white;
+    box-shadow: 2px 2px 8px;
+}
+#logOut:hover{
+  animation: glowBox 4s;
+  animation-iteration-count: 99;
+} 
