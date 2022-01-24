@@ -8,7 +8,7 @@ Javascript file handling clothes image
 var key, url;
 
 //key has very low limits!! please don't over use!!!
-// key = "GKEITncxgOYVcpLnEvJzsnYiU-xT4Hhm3l5CaeHP4lo";
+key = "GKEITncxgOYVcpLnEvJzsnYiU-xT4Hhm3l5CaeHP4lo";
 
 function getClothes (query){
     var searchTxt = query +" clothing";
@@ -36,7 +36,6 @@ function getClothes (query){
         // sets the different values of the date
         storage[0].clothesImg = imageSrc;
         storage[0].clothesImgAlt = altText;
-        storage[0].clothesText = "How about something like this for the " + searchTxt;
         // sets the updated array to localstorage
         localStorage.setItem('dateNight', JSON.stringify(storage));
 

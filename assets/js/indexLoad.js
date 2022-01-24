@@ -25,8 +25,7 @@ function indexLoad(){
             cocktailImgAlt:"",
             wentWell:"",
             clothesImg:"",
-            clothesImgAlt:"",
-            clothesText:""
+            clothesImgAlt:""
         }
 
         var list = [];

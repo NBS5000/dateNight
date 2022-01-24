@@ -23,7 +23,6 @@ function getJoke () {
     })
 }
 
-getJoke();
 
 //function to fetch quotable URL
 function getQuote () {
@@ -46,5 +45,3 @@ function getQuote () {
     localStorage.setItem('dateNight', JSON.stringify(storage));
   })
 }
-
-getQuote();
