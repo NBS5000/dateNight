@@ -36,7 +36,7 @@ function displayWeather(date){
     }
     //display data for cityWeather.daily[i]-->the date of dateNight
     var icon = cityWeather.daily[i].weather[0].icon;
-    var iconLink = "http://openweathermap.org/img/w/" + icon + ".png";
+    var iconLink = "https://openweathermap.org/img/w/" + icon + ".png";
     var showTemp = Math.round(cityWeather.daily[i].temp.day);
     var showWind = Math.round(cityWeather.daily[i].wind_speed * 3.6);
     var showRain = Math.round(cityWeather.daily[i].rain);
