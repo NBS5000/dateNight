@@ -105,7 +105,7 @@ Alternatively, here are a screenshots:
 
 * The Date page:
 
-    > ![Screenshot date page](assets/images/theDate.PNG)
+    > ![Screenshot date page](assets/images/theDate.png)
 
 * The 'open date' Welcome page:
 
@@ -113,7 +113,7 @@ Alternatively, here are a screenshots:
 
 * The Assessment modal:
 
-    > ![Screenshot date page](assets/images/assess.PNG)
+    > ![Screenshot date page](assets/images/howDidItGo.PNG)
 
 ---
 
