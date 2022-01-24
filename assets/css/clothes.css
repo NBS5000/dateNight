@@ -1,10 +1,7 @@
 #clothingWidget{
-    /* border: slategray 1px solid; */
     text-align: center;
     width: 40%;
     padding: 24px;
-    /* border-radius: 25px;
-    box-shadow: slategray 5px 5px 10px; */
     box-shadow: rgb(216, 221, 221) 5px 5px 10px;
     display: flex;
     flex-wrap: wrap;
@@ -15,11 +12,9 @@
 }
 
 #clothesImage{
-    width: 30%;
+    width: 100%;
     height: fit-content;
     border-radius: 15px;
-    /* animation: glowBox 6s;
-    animation-iteration-count: 99; */
     min-width: 180px;
     max-height: 450px;
     position: relative;
@@ -34,13 +29,14 @@
     box-shadow: slategray 5px 5px 10px;
 }
 .clothingText{
-    width: 80%;
+    width: 100%;
 }
 #clothingTextDiv{
     display: flex;
     flex-wrap: wrap;
     width: 45%;
     padding: 5%;
+    margin: 0 auto;
     height: fit-content;
     
 }
